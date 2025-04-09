@@ -36,13 +36,21 @@ document.addEventListener("DOMContentLoaded", function () {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
 
-            sections.forEach(section => {
-                if (section.id === targetId) {
+            if (targetId === "all") {
+                // If "All" is clicked, show all sections
+                sections.forEach(section => {
                     section.style.display = "block";
-                } else {
-                    section.style.display = "none";
-                }
-            });
+                });
+            } else {
+                // Otherwise, show only the targeted section
+                sections.forEach(section => {
+                    if (section.id === targetId) {
+                        section.style.display = "block";
+                    } else {
+                        section.style.display = "none";
+                    }
+                });
+            }
 
             // Highlight active link
             sidebarLinks.forEach(l => l.classList.remove('active'));
@@ -91,4 +99,12 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   updateCarousel(); // Init
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const sections = document.querySelectorAll('section');
+    sections.forEach(section => {
+        console.log(window.getComputedStyle(section)); // Logs the current styles of sections
+    });
 });
