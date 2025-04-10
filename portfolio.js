@@ -5,17 +5,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeSidebarBtn = document.getElementById('closeSidebar');
     const sidebarLinks = sidebar.querySelectorAll('a');
 
-    // Show sidebar
+    
     sidebarToggle.addEventListener('click', () => {
         sidebar.style.width = '250px';
     });
 
-    // Close sidebar
+    
     closeSidebarBtn.addEventListener('click', () => {
         sidebar.style.width = '0';
     });
 
-    // Scroll reveal effect
+    
     const revealSection = () => {
         document.querySelectorAll(".fade-in").forEach(section => {
             const sectionTop = section.getBoundingClientRect().top;
@@ -30,19 +30,19 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", revealSection);
     revealSection();
 
-    // Show one section at a time
+    
     sidebarLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
 
             if (targetId === "all") {
-                // If "All" is clicked, show all sections
+                
                 sections.forEach(section => {
                     section.style.display = "block";
                 });
             } else {
-                // Otherwise, show only the targeted section
+                
                 sections.forEach(section => {
                     if (section.id === targetId) {
                         section.style.display = "block";
@@ -52,22 +52,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 });
             }
 
-            // Highlight active link
+            
             sidebarLinks.forEach(l => l.classList.remove('active'));
             link.classList.add('active');
 
-            sidebar.style.width = '0'; // Close sidebar on selection
+            sidebar.style.width = '0'; 
         });
     });
 });
 
-// Detect clicks outside the sidebar
+
 document.addEventListener('click', function (event) {
     const isClickInsideSidebar = sidebar.contains(event.target);
     const isClickOnToggleButton = sidebarToggle.contains(event.target);
 
     if (!isClickInsideSidebar && !isClickOnToggleButton) {
-        sidebar.style.width = '0'; // Close the sidebar
+        sidebar.style.width = '0'; 
     }
 });
 
@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentIndex = 0;
 
   function updateCarousel() {
-    const sectionWidth = sections[0].offsetWidth + 40; // width + margin
+    const sectionWidth = sections[0].offsetWidth + 40; 
     track.style.transform = `translateX(-${currentIndex * sectionWidth}px)`;
 
     sections.forEach((sec, idx) => {
@@ -98,13 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
     updateCarousel();
   });
 
-  updateCarousel(); // Init
+  updateCarousel(); 
 });
 
 
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
-        console.log(window.getComputedStyle(section)); // Logs the current styles of sections
+        console.log(window.getComputedStyle(section)); 
     });
 });

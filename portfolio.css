@@ -60,13 +60,13 @@ section {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 100px;
     margin-bottom: 50px;
-    opacity: 0.9; /* Start with a slight opacity */
-    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; /* Animate scale, shadow, and opacity */
+    opacity: 0.9; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; 
 }
 
-/* Hover effect for sections */
+
 section:hover {
-    transform: scale(1.05) !important; /* Use !important if necessary */
+    transform: scale(1.05) !important; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -135,18 +135,18 @@ a {
 
 
   
-/* Overlay behind content to improve text visibility over video */
+
 .overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent black */
+    background: rgba(0, 0, 0, 0.4); 
     z-index: 0;
 }
 
-/* Update header styles for better readability */
+
 header {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: white;
@@ -168,7 +168,7 @@ header h2 {
     color: #00d8ff;
 }
 
-/* Projects Section Upgrade */
+
 #projects ul {
     display: grid;
     gap: 15px;
@@ -191,7 +191,7 @@ header h2 {
 
 
  
-/* Close Button inside Sidebar */
+
 .close-btn {
     position: absolute;
     top: 10px;
