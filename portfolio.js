@@ -108,3 +108,37 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log(window.getComputedStyle(section)); 
     });
 });
+
+
+  function toggleAboutSection() {
+    const content = document.getElementById('aboutExtra');
+    const button = document.getElementById('toggleAbout');
+    if (content.style.display === 'none') {
+      content.style.display = 'block';
+      button.textContent = 'Show less';
+    } else {
+      content.style.display = 'none';
+      button.textContent = 'Show more';
+    }
+  }
+
+
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+// Optional: close modal on outside click
+window.onclick = function(event) {
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+};
+
+
