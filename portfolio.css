@@ -198,7 +198,7 @@ header h1 {
 .modal-img {
   width: 100%;
   max-width: 600px;
-  height: auto;
+  height: 600px;
   border-radius: 10px;
   margin: 15px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -263,6 +263,7 @@ button {
   cursor: pointer;
   text-decoration: none;
   font-size: 0.9em;
+  font-style: italic;
 }
   
   
