@@ -123,7 +123,7 @@ a {
     left: 0;
     width: 100vw;
     height: 100vh;
-    background-image: url('cloud.jpg');
+    background-image: url('./media/cloud.jpg');
     background-size: cover;         
     background-position: center;     
     background-repeat: no-repeat;    
