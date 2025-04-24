@@ -47,8 +47,8 @@ section {
     margin: 20px auto;
     padding: 20px;
     width: 80%;
-    max-width: 800px;
-    border-radius: 10px;
+    max-width: 1300px;
+    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 100px;
     margin-bottom: 50px;
@@ -188,6 +188,7 @@ header h1 {
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     list-style: none;
     box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    font-weight: bold;
 }
 
 #projects li:hover {
@@ -197,11 +198,13 @@ header h1 {
 
 .modal-img {
   width: 100%;
-  max-width: 600px;
-  height: 600px;
+  max-width: 900px;
+  height: auto; /* Automatically adjusts height based on image ratio */
   border-radius: 10px;
   margin: 15px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: block;
+  object-fit: contain;
 }
 
  
@@ -236,12 +239,12 @@ header h1 {
 }
 
 .modal-content {
-  background-color: white;
+  background-color: lightcyan;
   margin: 10% auto;
   padding: 20px;
   border-radius: 10px;
   width: 80%;
-  max-width: 600px;
+  max-width: 900px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   position: relative;
 }
@@ -295,3 +298,5 @@ header > div {
     transform: scale(1.08);
     box-shadow: 0 8px 16px rgba(0, 119, 182, 0.4);
   }
+
+  
