@@ -298,4 +298,51 @@ header > div {
     box-shadow: 0 8px 16px rgba(0, 119, 182, 0.4);
   }
 
+  .project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .project-card {
+    background: lightcyan;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+    text-align: center;
+    overflow: hidden; /* important for zoom effect */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .project-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease; /* smooth zoom transition */
+  }
+  
+  .project-card:hover img {
+    transform: scale(1.05); /* zoom image a little */
+  }
+  
+  .project-card p {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .project-card p a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  .project-card p a:hover {
+    text-decoration: underline;
+  }
   

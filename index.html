@@ -68,7 +68,8 @@
       
             <p>🧩 Final Thoughts  
             Excited to leverage my passion for automation, modern cloud technologies and web applications to contribute to dynamic teams and build solutions that are faster, safer, and smarter. Let's create something great together! 🚀  
-            </p>
+            </p>   
+                
           </div>
           <button id="toggleAbout" onclick="toggleAboutSection()" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
         </div>
@@ -369,42 +370,56 @@
 
     
 
-    <section id="projects" class="fade-in">
+      <section id="projects" class="fade-in">
         <h2>📚 Projects (source codes in GitHub)</h2>
-        <ul>
-            <li>
-              <p >Restauranty App End-to-End DevOps Deployment</p>
-              <button onclick="openModal('pro1')">Show more</button>
-            </li>
-            <li>
-              <p>EKS-based Microservice App-automation</p>
-              <button onclick="openModal('pro2')">Show more</button>
-              
-            </li>
-            <li>
-              <p>EC2-Based Multistack Microservice App-automation</p>
-              <button onclick="openModal('pro3')">Show more</button>
-            </li>
-            <li>
-              <p>EKS-Based 3-Tier Node App</p>
-              <button onclick="openModal('pro4')">Show more</button>
-            </li>
-            </ul>
-            <ul>
-            <li>
-              <a href="https://www.chinazom.com/">This Portfolio-Mmakogu</a>
-            </li>
-            <li>
-              <a href="https://denis21m.github.io/unit-converter/file.html">Unit Converter</a>
-            </li>
-            <li>
-              <a href=" https://denis21m.github.io/Family-Data-Base-Project/family.html">Innocent-Family Database</a>
-            </li>
-            <li>
-              <a href="https://denis21m.github.io/Trivia-Game/Game.html">Trivia Game</a>
-            </li>
-        </ul>
-    </section>
+      
+        <div class="project-gallery">
+          <div class="project-card">
+            <a href="http://74.178.201.104/login"><img src="./media/restauranty.png" alt="Restauranty App Screenshot"></a>
+            <p>Restauranty App End-to-End DevOps Deployment</p>
+            <button onclick="openModal('pro1')">Show more</button>
+          </div>
+      
+          <div class="project-card">
+            <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/"><img src="./media/vote.png" alt="EKS-based Microservice App Screenshot"></a>
+            <p>EKS-based Microservice App-automation</p>
+            <button onclick="openModal('pro2')">Show more</button>
+          </div>
+      
+          <div class="project-card">
+            <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/"><img src="./media/vote.png" alt="EC2-based Multistack App Screenshot"></a>
+            <p>EC2-Based Multistack Microservice App-automation</p>
+            <button onclick="openModal('pro3')">Show more</button>
+          </div>
+      
+          <div class="project-card">
+            <img src="./media/3-tier.png" alt="EKS 3-Tier Node App Screenshot">
+            <p>EKS-Based 3-Tier Node App</p>
+            <button onclick="openModal('pro4')">Show more</button>
+          </div>
+      
+          <div class="project-card">
+            <a href="https://www.chinazom.com/" target="_blank"><img src="./media/port-app.png" alt="Portfolio Website Screenshot"></a>
+            <p>This Portfolio - Mmakogu</p>
+          </div>
+      
+          <div class="project-card">
+            <a href="https://denis21m.github.io/unit-converter/file.html" target="_blank"><img src="./media/convert.png" alt="Unit Converter Screenshot"></a>
+            <p>Unit Converter</p>
+          </div>
+      
+          <div class="project-card">
+            <a href="https://denis21m.github.io/Innocent-Family-Data-Base-Project/family.html" target="_blank"><img src="./media/family.png" alt="Innocent-Family Database Screenshot"></a>
+            <p>Innocent-Family Database</p>
+          </div>
+      
+          <div class="project-card">
+            <a href="https://denis21m.github.io/Trivia-Game/Game.html" target="_blank"><img src="./media/game.png" alt="Trivia Game Screenshot"></a>
+            <p>Trivia Game</p>
+          </div>
+        </div>
+      </section>
+      
 
     <div id="pro1" class="modal">
       <div class="modal-content">
