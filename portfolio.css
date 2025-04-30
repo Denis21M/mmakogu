@@ -50,7 +50,7 @@ section {
     max-width: 1300px;
     border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    margin-top: 100px;
+    margin-top: 60px;
     margin-bottom: 50px;
     opacity: 0.9; 
     transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease; 
@@ -58,7 +58,7 @@ section {
 
 
 section:hover {
-    transform: scale(1.05) !important; 
+    transform: scale(1.03) !important; 
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2) !important;
 }
 
@@ -73,7 +73,7 @@ a {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1s ease-out, transform 1s ease-out;
-    animation: fadeIn 1.5s ease-in-out forwards;
+    animation: fadeIn 0.5s ease-in-out forwards;
 }
 
 @keyframes fadeIn {
@@ -86,13 +86,12 @@ a {
 
     section {
         background: rgba(255, 255, 255, 0.9);
-        margin: 20px auto;
+       
         padding: 20px;
         width: 80%;
         max-width: 800px;
         border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-        margin-top: 50px;
         font-size: 15px;
     }
 
@@ -173,32 +172,10 @@ header h1 {
     margin-bottom: 10px;
 }
 
-
-#projects ul {
-    display: grid;
-    gap: 15px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-}
-
-#projects li {
-    background: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    list-style: none;
-    box-shadow: 0 0 5px rgba(0,0,0,0.1);
-    font-weight: bold;
-}
-
-#projects li:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-}
-
 .modal-img {
   width: 100%;
   max-width: 900px;
-  height: auto; /* Automatically adjusts height based on image ratio */
+  height: auto; 
   border-radius: 10px;
   margin: 15px 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
