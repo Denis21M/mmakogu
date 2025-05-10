@@ -86,12 +86,22 @@ document.addEventListener("DOMContentLoaded", () => {
   function toggleSection(contentId, buttonId) {
     const content = document.getElementById(contentId);
     const button = document.getElementById(buttonId);
+    const footer = document.getElementById("contact");
+
+    const isSmallScreen = window.matchMedia("(max-width: 600px)").matches;
+
     if (content.style.display === 'none') {
       content.style.display = 'block';
       button.textContent = 'Show less';
+      if (footer && isSmallScreen) {
+        footer.style.display = 'none';
+      }
     } else {
       content.style.display = 'none';
       button.textContent = 'Show more';
+      if (footer && isSmallScreen) {
+        footer.style.display = 'block';
+      }
     }
   }
 
