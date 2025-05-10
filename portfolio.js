@@ -44,16 +44,17 @@ document.addEventListener("DOMContentLoaded", function () {
                 sections.forEach(section => {
                     section.style.display = "block";
                 });
-            } else {
-                
-                sections.forEach(section => {
-                    if (section.id === targetId) {
-                        section.style.display = "block";
-                    } else {
-                        section.style.display = "none";
-                    }
-                });
-            }
+            } else if (targetId === "none") {
+              // Hide all sections
+              sections.forEach(section => {
+                  section.style.display = "none";
+              });
+          } else {
+              // Show only the clicked section
+              sections.forEach(section => {
+                  section.style.display = section.id === targetId ? "block" : "none";
+              });
+          }
 
             
             sidebarLinks.forEach(l => l.classList.remove('active'));
