@@ -5,6 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const closeSidebarBtn = document.getElementById('closeSidebar');
     const sidebarLinks = sidebar.querySelectorAll('a');
 
+    sections.forEach(section => {
+        section.style.display = "none";
+    });
     
     sidebarToggle.addEventListener('click', () => {
         sidebar.style.width = '250px';
@@ -72,37 +75,6 @@ document.addEventListener('click', function (event) {
 });
 
 document.addEventListener("DOMContentLoaded", () => {
-  const track = document.querySelector('.carousel-track');
-  const sections = document.querySelectorAll('.carousel-track section');
-  const prevBtn = document.getElementById('prevBtn');
-  const nextBtn = document.getElementById('nextBtn');
-  let currentIndex = 0;
-
-  function updateCarousel() {
-    const sectionWidth = sections[0].offsetWidth + 40; 
-    track.style.transform = `translateX(-${currentIndex * sectionWidth}px)`;
-
-    sections.forEach((sec, idx) => {
-      sec.classList.remove("active");
-      if (idx === currentIndex) sec.classList.add("active");
-    });
-  }
-
-  prevBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex - 1 + sections.length) % sections.length;
-    updateCarousel();
-  });
-
-  nextBtn.addEventListener("click", () => {
-    currentIndex = (currentIndex + 1) % sections.length;
-    updateCarousel();
-  });
-
-  updateCarousel(); 
-});
-
-
-document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         console.log(window.getComputedStyle(section)); 
@@ -110,9 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-  function toggleAboutSection() {
-    const content = document.getElementById('aboutExtra');
-    const button = document.getElementById('toggleAbout');
+  function toggleSection(contentId, buttonId) {
+    const content = document.getElementById(contentId);
+    const button = document.getElementById(buttonId);
     if (content.style.display === 'none') {
       content.style.display = 'block';
       button.textContent = 'Show less';

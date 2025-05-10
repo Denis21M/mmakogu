@@ -48,7 +48,6 @@ section {
     padding: 20px;
     width: 80%;
     max-width: 1300px;
-    border-radius: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     margin-top: 60px;
     margin-bottom: 50px;
@@ -90,7 +89,6 @@ a {
         padding: 20px;
         width: 80%;
         max-width: 800px;
-        border-radius: 10px;
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
         font-size: 15px;
     }
@@ -137,9 +135,6 @@ a {
     padding-top: 3vh;
   }
 
-
-  
-
 .overlay {
     position: fixed;
     top: 0;
@@ -182,8 +177,6 @@ header h1 {
   display: block;
   object-fit: contain;
 }
-
- 
 
 .close-btn {
     position: absolute;
@@ -323,3 +316,8 @@ header > div {
     text-decoration: underline;
   }
   
+  .button-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }

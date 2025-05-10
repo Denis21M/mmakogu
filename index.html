@@ -32,11 +32,10 @@
     <section id="about" class="fade-in">
         <h2>💡 About Me</h2>
         <div>
+          <div id="Extra1" style="display: none;">
             <p>
-                I'm a highly enthusiastic DevOps, Cloud and frontend development professional, with hands-on expertise across the entire software delivery lifecycle. My intensive training in automation, containerization, cloud infrastructure, monitoring  and cloud providers like AWS and Azure has equipped me with the skills to build, deploy, and scale applications reliably. I have had quite a dynamic career path over the years, apparent in transcending through logistics and customer advisory to IT support, DevOps and cloud practise, frontend web development which are areas that drive my passion due to my strong affinity for technology.
+              I'm a highly enthusiastic DevOps, Cloud and frontend development professional, with hands-on expertise across the entire software delivery lifecycle. My intensive training in automation, containerization, cloud infrastructure, monitoring  and cloud providers like AWS and Azure has equipped me with the skills to build, deploy, and scale applications reliably. I have had quite a dynamic career path over the years, apparent in transcending through logistics and customer advisory to IT support, DevOps and cloud practise, frontend web development which are areas that drive my passion due to my strong affinity for technology.
             </p>
-          
-          <div id="aboutExtra" style="display: none;">
             <h3>🧠 Core Competencies</h3>
             <ul>
               <li>DevOps & Agile: Lean principles, value streams, continuous feedback, and DevOps KPIs.</li>
@@ -75,38 +74,47 @@
             </p>   
                 
           </div>
-          <button id="toggleAbout" onclick="toggleAboutSection()" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+          <div class="button-wrapper">
+          <button id="toggle1" onclick="toggleSection('Extra1', 'toggle1')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+          </div>
         </div>
       </section>
 
     <section id="experience" class="fade-in">
         <h2>⌨🖱 Work Experience</h2>
+        <div>
+        <div id="Extra2" style="display: none;">
         <ul>
             <li>
                 <strong>DevOps and Cloud Specialist</strong> - Freelance (November 2024 - Present)
-                <button onclick="openModal('exp1')">Show more</button>
+                <button onclick="openModal('exp1')">Read</button>
             </li>  
             <li>
                 <strong>Fulfillment Associate (Special Operations)</strong> - Hive Technologies GmbH Berlin, Germany (November 2023 - November 2024)
-                <button onclick="openModal('exp2')">Show more</button>
+                <button onclick="openModal('exp2')">Read</button>
             </li>
             <li>
                 <strong>Customer Advisor</strong> - Concentrix GmbH Berlin, Germany (October 2022 - January 2024)
-                <button onclick="openModal('exp3')">Show more</button>
+                <button onclick="openModal('exp3')">Read</button>
             </li>
             <li>
                 <strong>Business Management Intern</strong> - Dimitra International Warsaw, Poland (November 2022 - April 2023)
-                <button onclick="openModal('exp4')">Show more</button>
+                <button onclick="openModal('exp4')">Read</button>
             </li>
             <li>
                 <strong>Warehouse Employee</strong> - YoungCapital Berlin, Germany (January 2021-October 2022)
-                <button onclick="openModal('exp5')">Show more</button>
+                <button onclick="openModal('exp5')">Read</button>
             </li>
             <li>
                 <strong>Shipping Auditor/Warehouse Employee</strong> - Adecco for Amazon Berlin, Germany (January 2019 - October 2021)
-                <button onclick="openModal('exp6')">Show more</button>
+                <button onclick="openModal('exp6')">Read</button>
             </li>
         </ul>
+      </div>
+      <div class="button-wrapper">
+      <button id="toggle2" onclick="toggleSection('Extra2', 'toggle2')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+      </div>  
+    </div>
     </section>
 
     <div id="exp1" class="modal">
@@ -307,24 +315,31 @@
 
     <section id="education" class="fade-in">
         <h2>👨🏽‍🎓 Education & Training</h2>
+        <div>
+          <div id="Extra3" style="display: none;">
         <ul>
             <li>
                 <strong>DevOps and Cloud Computing</strong> - Ironhack Berlin (November 2024 - April 2025)
-                <button onclick="openModal('edu1')">Show more</button>
+                <button onclick="openModal('edu1')">Read</button>
             </li>
             <li>
                 <strong>Frontend Web Development</strong> - Mimo.org (March 2022 - November 2024)
-                <button onclick="openModal('edu2')">Show more</button>
+                <button onclick="openModal('edu2')">Read</button>
             </li>
             <li>
                 <strong>Bachelor of Arts in International Business</strong> - Hochschule für Technik und Wirtschaft, Berlin (April 2019 - November 2023)
-                <button onclick="openModal('edu3')">Show more</button>
+                <button onclick="openModal('edu3')">Read</button>
             </li>
             <li>
                 <strong>Bachelor of Science in Animal and Env. Biology</strong> - University of Port Harcourt, Nigeria (November 2010 - May 2015)
-                <button onclick="openModal('edu4')">Show more</button>
+                <button onclick="openModal('edu4')">Read</button>
             </li>
         </ul>
+      </div>
+      <div class="button-wrapper">
+      <button id="toggle3" onclick="toggleSection('Extra3', 'toggle3')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+      </div>  
+    </div>
     </section>
 
     <div id="edu1" class="modal">
@@ -416,8 +431,9 @@
 
       <section id="projects" class="fade-in">
         <h2>📚 Projects (source codes in GitHub)</h2>
-      
-        <div class="project-gallery">
+        </div>
+          <div id="Extra4" style="display: none;">
+        <div class="project-gallery" >
           <div class="project-card">
             <a href="http://74.178.201.104/login"><img src="./media/restauranty.png" alt="Restauranty App Screenshot"></a>
             <p>Restauranty App End-to-End DevOps Deployment</p>
@@ -462,6 +478,11 @@
             <p>Trivia Game</p>
           </div>
         </div>
+        </div>
+        <div class="button-wrapper">
+        <button id="toggle4" onclick="toggleSection('Extra4', 'toggle4')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+        </div>
+    </div>
       </section>
       
 
@@ -649,35 +670,67 @@
 
     <section id="certification" class="fade-in">
         <h2>🏆 Professional Certifications</h2>
+        <div>
+          <div id="Extra5" style="display: none;">
+      <ul>
         <li><a href="./media/DevOps-Cert.pdf" target="_blank">DevOps and Cloud Computing (2025)</a>- Ironhack.com</li>
         <li><a href="./media/sql.pdf" target="_blank">SQL (2024)</a>- Mimo.org</li>
         <li><a href="./media/frontend.pdf" target="_blank">Front-end web development(2024)</a>- Mimo.org</li>
         <li><a href="./media/BMC.pdf" target="_blank">BMC(2020)</a>- Bloomberg</li>
-    </section>
+      </ul>
+        </div>
+        <div class="button-wrapper">
+          <button id="toggle5" onclick="toggleSection('Extra5', 'toggle5')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+        </div>
+      </div>
+      </section>
 
     <section id="reference" class="fade-in">
         <h2>📝 Referees</h2>
+        <div>
+          <div id="Extra6" style="display: none;">
         <ul>
             <li><a href="./media/dimitra.pdf" target="_blank" rel="noopener noreferrer">Jesus Alamo</a> - Dimitra Intl. SRL - Legal and Business Consultancy</li>
             <li><a href="./media/concentrix.pdf" target="_blank" rel="noopener noreferrer">Malgorzata Kirkiewicz</a> - Concentrix Global Services GmbH</li>
             <li><a href="./media/HTW.pdf" target="_blank" rel="noopener noreferrer">Prof. Dr. Tetiana Paientko</a> - HTW-Berlin</li>
         </ul>
+      </div>
+      <div class="button-wrapper">
+        <button id="toggle6" onclick="toggleSection('Extra6', 'toggle6')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+      </div>
+    </div>
     </section>
 
     <section id="certification" class="fade-in">
-      <h2>🏆 In View (Currently Working on Taking The Paid Exams)</h2>
+      <h2>🏆 In View (Paid Exams)</h2>
+      <div>
+        <div id="Extra7" style="display: none;">
+    <ul>
       <li>AWS Certified Solutions Architect (Associate) (2025)</a>- aws.amazon.com</li>
       <li>Microsoft Certified Azure Administrator Associate (2025)</a>- learn.microsoft.com</li>
+    </ul>
+    </div>
+    <div class="button-wrapper">
+      <button id="toggle7" onclick="toggleSection('Extra7', 'toggle7')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: italic;">Show more</button>
+    </div>
+  </div>
     </section>
 
     <section id="contact" class="fade-in">
         <h2>📠 Contacts & Platforms</h2>
+        <div>
+          <div id="Extra8" style="display: none;">
         <p>Email: <a href="mailto:Baconchinazom@yahoo.com">Baconchinazom@yahoo.com</a></p>
         <p>LinkedIn: <a href="http://www.linkedin.com/in/mmakogu" target="_blank">linkedin.com/in/mmakogu</a></p>
         <p>Github: <a href="https://github.com/Denis21M" target="_blank">https://github.com/Denis21M</a></p>
         <p>Phone: <a href="tel:+49 15734379121">+49 15734379121 📞</a>
         <p>Phone: <a href="tel:+420 732668125">+420 732668125 📞</a>
-        </p>  
+        </p>
+        </div>
+        <div class="button-wrapper">
+          <button id="toggle8" onclick="toggleSection('Extra8', 'toggle8')" style="background: none; color: #3498db; border: none; cursor: pointer; padding: 0; font: inherit; font-style: bold;">Show more</button>
+        </div>
+      </div>  
     </section>
 
     
@@ -687,6 +740,7 @@
     <div id="sidebar" class="sidebar">
         <button id="closeSidebar" class="close-btn">✖</button>
         <a href="#all" id="allLink">All Sections</a>
+        <a href="#none" id="closeSectionsLink">Close Sections</a>
         <a href="#about">About Me</a>
         <a href="#experience">Work Experience</a>
         <a href="#education">Education & Training</a>
