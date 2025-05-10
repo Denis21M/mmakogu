@@ -85,7 +85,6 @@ a {
 
     section {
         background: rgba(255, 255, 255, 0.9);
-       
         padding: 20px;
         width: 80%;
         max-width: 800px;
@@ -110,6 +109,24 @@ a {
         width: 100px;
         height: 100px;
       }
+
+      .footer {
+        top: 40px;
+        right: 5px;
+      }
+
+      .sidebar-toggle {
+        position: fixed;
+        top: 27px;
+        left: 10px;
+        font-size: 15px;
+        color: white;
+        background-color: #2c3e50;
+        border: none;
+        padding: 5px;
+        cursor: pointer;
+        z-index: 2000;
+    }
 
 }
 
@@ -321,3 +338,37 @@ header > div {
     justify-content: center;
     margin-top: 15px;
   }
+
+  .footer {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    border: none;
+    z-index: 1000;
+  }
+  
+  .footer h2 {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .contact-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  
+  .contact-icons a {
+    font-size: 2rem;
+    color: #3498db;
+    transition: transform 0.3s ease, color 0.3s ease;
+  }
+  
+  .contact-icons a:hover {
+    color: #1d6fa5;
+    transform: scale(1.2) rotate(5deg);
+  }
+  
+  
