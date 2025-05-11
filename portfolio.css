@@ -332,6 +332,18 @@ header > div {
     margin-top: 15px;
   }
 
+  footer {
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  footer.hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+
   .footer {
     position: fixed;
     bottom: 25px;
@@ -364,4 +376,13 @@ header > div {
     transform: scale(1.2) rotate(5deg);
   }
   
+  .expandable {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+  }
+  
+  .expandable.show {
+    max-height: 500px; /* Adjust as needed based on your content height */
+  }
   

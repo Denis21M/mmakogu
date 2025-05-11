@@ -90,20 +90,29 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const isSmallScreen = window.matchMedia("(max-width: 600px)").matches;
 
-    if (content.style.display === 'none') {
-      content.style.display = 'block';
-      button.textContent = 'Show less';
-      if (footer && isSmallScreen) {
-        footer.style.display = 'none';
-      }
-    } else {
-      content.style.display = 'none';
-      button.textContent = 'Show more';
-      if (footer && isSmallScreen) {
-        footer.style.display = 'block';
-      }
-    }
+    const isExpanded = content.classList.contains("show");
+
+  if (isExpanded) {
+    content.style.maxHeight = "0px";
+    content.classList.remove("show");
+    button.textContent = "Show more";
+  } else {
+    content.classList.add("show");
+    content.style.maxHeight = content.scrollHeight + "px";
+    button.textContent = "Show less";
   }
+
+  if (isSmallScreen) {
+    const expandableSections = document.querySelectorAll(".expandable");
+    const anyOpen = Array.from(expandableSections).some(section =>
+      section.classList.contains("show")
+    );
+
+    footer.classList.toggle("hidden", anyOpen);
+  } else {
+    footer.classList.remove("hidden");
+  }
+}
 
 
 function openModal(id) {
@@ -114,7 +123,7 @@ function closeModal(id) {
   document.getElementById(id).style.display = 'none';
 }
 
-// Optional: close modal on outside click
+// close modal on outside click
 window.onclick = function(event) {
   const modals = document.querySelectorAll('.modal');
   modals.forEach(modal => {
