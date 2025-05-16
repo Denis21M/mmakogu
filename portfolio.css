@@ -415,6 +415,7 @@ button {
         align-items: center;
         text-align: center;
         padding-right: 35px;
+        gap: 0px;
       }
 
       .sidebar-toggle {
@@ -440,19 +441,23 @@ button {
 
     .footer-text {
       text-align: center;
-      margin-bottom: 1rem;
-      font-size: 0.6rem;
+      margin-bottom: 0.01rem;
+      font-size: 0.5rem;
     }
 
     footer {
-      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .contact-icons {
-      margin-top: 1.2rem;
-      margin-bottom: 0; 
+      margin-top: 0.8rem;
+      margin-bottom: 0.8rem; 
+      gap: 1rem;
     }
    
+    .contact-icons a {
+     font-size: 0.8rem;
+    }
 }
 
 
