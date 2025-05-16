@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+    <header>
+        <div>
+          <div id="header-photo">
+            <img src="./media/prof.jpg" alt="Profile Photo of Bacon"/>
+          </div>
+          <div id="header-text">
+            <h1>Bacon Chinazom Mmakogu (He/Him)</h1>
+            <p>DevOps & Cloud Specialist | Junior Frontend Web Developer</p>
+            
+          </div>
+        </div>
+      </header>
+    
+    <main>
+      <div class="bg-image"></div>
+    
+      <div class="overlay"></div>
+
+      <section id="projects" class="fade-in">
+        
+        <h2>📚 Projects (source codes in GitHub)</h2>
+       
+        <div class="project-gallery" >
+
+          <h3 class="project-subhead">DevOps Projects</h3>
+          
+          <div class="project-card">
+            <a href="http://74.178.201.104/login"><img class="pc" src="./media/restauranty.png" alt="Restauranty App Screenshot"></a>
+            <p>Restauranty App (AKS)</p>
+            <button onclick="openModal('pro1')">Show more</button>
+          </div>
+      
+          <div class="project-card">
+            <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/"><img class="pc" src="./media/vote1.png" alt="EKS-based Microservice App Screenshot"></a>
+            <p>Vote App (EKS)</p>
+            <button onclick="openModal('pro2')">Show more</button>
+          </div>
+      
+          <div class="project-card">
+            <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/"><img class="pc" src="./media/vote1.png" alt="EC2-based Multistack App Screenshot"></a>
+            <p>Vote App (EC2)</p>
+            <button onclick="openModal('pro3')">Show more</button>
+          </div>
+
+          <div class="project-card">
+            <a href="http://52.158.116.219/"><img class="pc" src="./media/expensy.png" alt="EC2-based Multistack App Screenshot"></a>
+            <p>Expensy App (AKS)</p>
+            <button onclick="openModal('pro4')">Show more</button>
+          </div>
+        </div>
+      </div>
+        </section>
+
+
+          <section id="projects" class="fade-in">
+            </div>
+            <div class="project-gallery" >
+
+          <h3 class="project-subhead">Frontend Projects</h3>
+
+          <div class="project-card"> 
+            <a href="https://www.chinazom.com/" target="_blank">
+              <img class="pc-view" src="./media/port-app.png" alt="Portfolio Website Screenshot">
+            <img class="mobile-view" src="./media/mmakogu.jpg" alt="Mobile View Screenshot">
+          </a>
+            <p>This Portfolio</p>
+            <button onclick="window.open('https://github.com/Denis21M/mmakogu', '_blank')">Git Repo</button>
+          </div>
+          
+          <div class="project-card"> 
+            <a href="https://denis21m.github.io/unit-converter/file.html" target="_blank">
+              <img class="pc-view" src="./media/convert.png" alt="Unit Converter Screenshot">
+            <img class="mobile-view" src="./media/unit.jpg" alt="Mobile View Screenshot">
+            </a>
+            <p>Unit Converter</p>
+            <button onclick="window.open('https://github.com/Denis21M/unit-converter', '_blank')">Git Repo</button>
+          </div>
+          
+          <div class="project-card"> 
+            <a href="https://denis21m.github.io/Innocent-Family-Data-Base-Project/family.html" target="_blank">
+              <img class="pc-view" src="./media/family.png" alt="Innocent-Family Database Screenshot">
+            <img class="mobile-view" src="./media/db.jpg" alt="Mobile View Screenshot">
+            </a>
+            <p>Innocent-Family Database</p>
+            <button onclick="window.open('https://github.com/Denis21M/Innocent-Family-Data-Base-Project', '_blank')">Git Repo</button>
+
+          </div>
+          
+          <div class="project-card"> 
+            <a href="https://denis21m.github.io/Trivia-Game/Game.html" target="_blank">
+              <img class="pc-view" src="./media/game.png" alt="Trivia Game Screenshot">
+            <img class="mobile-view" src="./media/gam.jpg" alt="Mobile View Screenshot">
+            </a>
+            <p>Trivia Game</p>
+            <button onclick="window.open('https://github.com/Denis21M/Trivia-Game', '_blank')">Git Repo</button>
+          </div>
+          
+        </div>
+        </div>
+      </section>
+      
+
+    <div id="pro1" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('pro1')">&times;</span>
+        <h3>Restauranty App End-to-End DevOps Deployment</h3>
+        <p>This project is a full-stack microservices-based web application deployed on Azure Kubernetes Service (AKS) using a GitHub Actions CI/CD pipeline and Terraform infrastructure as code.</p>
+        <img src="./media/restauranty.png" alt="Restauranty App Architecture" class="modal-img" />
+        <em>Figure 1: Restauranty App</em>
+        <p>
+          Access app <a href="http://74.178.201.104/login">here</a> Note due to cost reasons the app may not be accessible at the time of use.
+        </p>
+        <img src="./media/project4.jpeg" alt="Restauranty App Architecture" class="modal-img" />
+        <em>Figure 2: Project Architecture</em>
+        <h4>The application consists of:</h4>
+        <ul>
+        <li>
+          <p>Three Node.js backend microservices:</p>
+          <p>- Auth: User authentication & JWT generation</p>
+          <p>- Discounts: Campaign and coupon management</p>
+          <p>- Items: Product catalog and order handling</p>
+        </li>
+        <li>
+          <p>React frontend:</p>
+          <p>- Acts as a single-page application (SPA) interacting with backend microservices via /api/* routes</p>
+        </li>
+        <li>
+          <p>MongoDB:</p>
+          <p>- Centralized NoSQL database for all microservices, exposed via port 27017</p>
+        </li>
+        <li>
+          <p>Ingress Controller:</p>
+          <p>- Routes traffic from a single public IP/domain to appropriate services</p>
+          <p>- NGINX Ingress on port 80</p>
+        </li>
+        <li>
+          <p>Monitoring & Logging:</p>
+          <p>- Prometheus + Grafana (monitoring namespace): Metrics scraping and visualization</p>
+          <p>- ELK Stack (Elasticsearch, Logstash, Kibana) (logging namespace): Centralized log collection and analysis</p>
+        </li>
+        <li>
+          <p>🔐 Security:</p>
+          <p>- Ingress is the only public entrypoint.</p>
+          <p>- JWT authentication handled by the Auth service; other services validate tokens.</p>
+          <p>- Environment variables and secrets are stored securely in Kubernetes Secrets or .env (not committed).</p>
+          <p>- Network Policies restrict communication between pods where needed.</p>
+        </li>
+        </ul>
+        <p>
+          <strong>Key Skills:</strong> DevOps | Cloud Platforms (AKS) | Iac | CI/CD Automation with GitHub Action | Containerization | Kubernetes | Monitoring & Logging | Terraform | Agile Methodologies (Jira)  
+        </p>
+        <p>
+          <strong>GitHub Repository:</strong> <a href="https://github.com/Denis21M/Restauranty-End-to-End-DevOps-Deployment.git">Here</a>
+        </p>
+        </div>
+    </div>
+
+    <div id="pro2" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('pro2')">&times;</span>
+        <h3>EKS-based Microservice App-automation</h3>
+        <p>This project is a simplified voting application deployed on Amazon EKS (Elastic Kubernetes Service). It includes a voting interface and result viewer, integrated with a backend Redis/PostgreSQL system. Deployment is fully automated using GitHub Actions CI/CD.</p>
+        <img src="./media/vote.png" alt="Architecture" class="modal-img" />
+        <em>Figure 3: Vote App</em>
+        <p>
+          Cast vote <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/">here</a> Observe real time result update by adding /result to the elb URL, Note due to cost reasons the app may not be accessible at the time of use.
+        </p>
+        <img src="./media/project3.jpeg" alt="Architecture" class="modal-img" />
+        <em>Figure 4: Project Architecture</em>
+        <h4>The application consists of:</h4>
+        <ul>
+          <li>
+            <p>Frontend Clients:</p>
+            <p>- Vote (/vote)</p>
+            <p>- Result (/result)</p>
+          </li>
+          <li>
+            <p>Backend Services:</p>
+            <p>- Redis: Acts as a temporary cache to store incoming votes</p>
+            <p>- PostgreSQL: Stores final vote counts permanently</p>
+            <p>- Worker: Background service that transfers data from Redis to PostgreSQL</p>
+          </li>
+          <li>
+            <p>Ingress Controller:</p>
+            <p>- NGINX Ingress exposes a single endpoint with routing to /, /vote and /result</p>
+            <p>- Ingress Listener on port 80 (two listener rules), two target groups attached two frontend clients at port 80 and 81</p>
+          </li>
+          <li>
+            <p>🔐 Security Practices:</p>
+            <p>- Only Ingress Controller is publicly exposed via EKS Load Balancer</p>
+            <p>- Communication between services is handled internally within the EKS cluster</p>
+            <p>- No hardcoded credentials or sensitive data in the codebase</p>
+            <p>- Secrets are managed via Kubernetes Secrets</p>
+          </li>
+        </ul>
+        <p> 
+          <strong>Key Skills:</strong> DevOps | Cloud Computing | Infrastructure as Code | CI/CD Automation with GitHub Actions | Containerization (Docker) | Kubernetes | AWS | Terraform | Agile Methodologies | AWS Load balancer for Ingress |Redis | Worker | PostgresSQL  
+      </p>
+      <p>
+        <strong>GitHub Repository:</strong> <a href="https://github.com/Denis21M/EKS-based-microservice-apps-automation.git">Here</a>
+      </p>
+      </div>
+    </div>
+
+    <div id="pro3" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal('pro3')">&times;</span>
+        <h3>EC2-based Microservice App-automation</h3>
+        <p>This project is a full-stack microservices-based voting application deployed on AWS infrastructure using Terraform and configuration managed with Ansible. It demonstrates best practices in infrastructure as code (IaC), network security, configuration management, and microservices orchestration using EC2 instances.</p>
+        <img src="./media/vote.png" alt="Architecture" class="modal-img" />
+        <em>Figure 5: Vote App</em>
+        <p>
+          Cast vote <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/">here</a> Observe real time result update by adding /result to the elb URL, Note due to cost reasons the app may not be accessible at the time of use.
+        </p>
+        <img src="./media/project1.jpeg" alt="Architecture" class="modal-img" />
+        <em>Figure 6: Project Architecture</em>
+        <ul>
+        <li>
+          <p>Frontend:</p>
+          <p>- Vote App: Casts votes on specific options (accessible at /vote and /)</p>
+          <p>- Result App: Displays real-time voting results (accessible at /result)</p>
+        </li>
+        <li>
+          <p>Backend Services:</p>
+          <p>- Redis: Acts as a temporary cache to store incoming votes</p>
+          <p>- Worker Service: Consumes votes from Redis and writes to Postgres</p>
+          <p>- PostgreSQL: Stores final vote counts accessible by result</p>
+        </li>
+        <li>
+          <p>VPC with:</p>
+          <p>- 2 Public Subnets (across 2 AZs for redundancy): ALB (Application Load Balancer) for routing external requests and Bastion Host in one AZ for internal access</p>
+          <p>- 1 Private Subnet for secure app hosting: Contains 3 EC2 Instances for vote/reult (frontend), redis+worker and Postgres each</p>
+          <p>- NAT Gateway: Allows private EC2 instances internet access for package installations</p>
+          <p>- Internet Gateway (IGW): Enables external traffic routing via ALB and Bastion Host</p>
+        </li>
+        <li>
+          <p>🔐 Security:</p>
+          <p>- Security group rules defined for tightly controlled communication for expmple, redis allows connection from vote and worker only, postgress allow connection from result and worker only</p>
+          <p>- EC2s only allow connection from Bastion host which hosts Ansible and uses ProxyJump for secure SSH access. Automates application installation and configuration across EC2 instances</p>
+        </li>
+        <li>
+          <p>Application Flow:</p>
+          <p>- User casts a vote via Vote frontend → Redis cache vote → worker read votes from redis and writes to Postgres → result reads results from Postgres </p>
+          <p>- vote port (80:80), result port (81:80), redis port (6379:6379), worker port(no port exposed and no service created because it gets no connection from anywhere), postgres port(5432:5432)</p>
+          <p>- Worker: Background service that transfers data from Redis to PostgreSQL</p>
+        </li>
+        </ul>
+        <p> 
+          <strong>Key Skills:</strong> DevOps | Cloud Computing | Infrastructure as Code | Configuration management - Ansible | Containerization | AWS, EC2, VPC, Subnets, Nat, IGW and ALB | Agile Methodologies | microservice architecture | Networking - Load balancer, private/public subnet isolation, Nat configuration.
+      </p>
+      <p>
+        <strong>GitHub Repository:</strong> <a href="https://github.com/Denis21M/EC2-based-Microservice-App-automation.git">Here</a>
+      </p>
+      </div>
+    </div>
+
+
+      <footer id="contact" class="footer fade-in">
+        <div class="contact-icons">
+          <a href="mailto:Baconchinazom@yahoo.com" target="_blank" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mmakogu" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Denis21M" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="tel:+4915734379121" title="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+      </footer>
+      
+      <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+      
+      
+      <div id="sidebar" class="sidebar">
+        <button id="closeSidebar" class="close-btn">✖</button>
+        <a href="#none" id="closeSectionsLink" style="color: cyan;">Hide All</a>
+        <a href="index.html#about">Professional Summary</a>
+        <a href="index.html#experience">Work Experience</a>
+        <a href="index.html#education">Education & Training</a>
+        <a href="projects.html">Projects</a>
+        <a href="index.html#certification">Professional Certifications</a>
+        <a href="index.html#reference">References</a>
+        <a href="index.html#ongoing">See Ongoing Projects</a>
+        <a href="#all" id="allLink" style="color: cyan">Show All</a>
+    </div>
+
+      <script src="portfolio.js"></script>
+</body>
+</html>

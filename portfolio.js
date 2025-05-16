@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const sidebarLinks = sidebar.querySelectorAll('a');
 
     sections.forEach(section => {
-        section.style.display = "none";
+        section.style.display = "block";
     });
     
     sidebarToggle.addEventListener('click', () => {
@@ -18,17 +18,14 @@ document.addEventListener("DOMContentLoaded", function () {
         sidebar.style.width = '0';
     });
 
-    
-    const revealSection = () => {
-        document.querySelectorAll(".fade-in").forEach(section => {
-            const sectionTop = section.getBoundingClientRect().top;
-            const windowHeight = window.innerHeight;
-            if (sectionTop < windowHeight - 50) {
-                section.style.opacity = "1";
-                section.style.transform = "translateY(0)";
-            }
-        });
-    };
+    document.addEventListener('click', function (event) {
+      const isClickInsideSidebar = sidebar.contains(event.target);
+      const isClickOnToggleButton = sidebarToggle.contains(event.target);
+  
+      if (!isClickInsideSidebar && !isClickOnToggleButton) {
+          sidebar.style.width = '0'; 
+      }
+  });
 
     window.addEventListener("scroll", revealSection);
     revealSection();
@@ -36,7 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     
     sidebarLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-            e.preventDefault();
+            
             const targetId = link.getAttribute('href').substring(1);
 
             if (targetId === "all") {
@@ -66,14 +63,17 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-document.addEventListener('click', function (event) {
-    const isClickInsideSidebar = sidebar.contains(event.target);
-    const isClickOnToggleButton = sidebarToggle.contains(event.target);
+const revealSection = () => {
+  document.querySelectorAll(".fade-in").forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      if (sectionTop < windowHeight - 50) {
+          section.style.opacity = "1";
+          section.style.transform = "translateY(0)";
+      }
+  });
+};
 
-    if (!isClickInsideSidebar && !isClickOnToggleButton) {
-        sidebar.style.width = '0'; 
-    }
-});
 
 document.addEventListener("DOMContentLoaded", () => {
     const sections = document.querySelectorAll('section');
@@ -82,37 +82,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
-
-  function toggleSection(contentId, buttonId) {
-    const content = document.getElementById(contentId);
-    const button = document.getElementById(buttonId);
-    const footer = document.getElementById("contact");
-
-    const isSmallScreen = window.matchMedia("(max-width: 600px)").matches;
-
-    const isExpanded = content.classList.contains("show");
-
-  if (isExpanded) {
-    content.style.maxHeight = "0px";
-    content.classList.remove("show");
-    button.textContent = "Show more";
-  } else {
-    content.classList.add("show");
-    content.style.maxHeight = content.scrollHeight + "px";
-    button.textContent = "Show less";
-  }
-
-  if (isSmallScreen) {
-    const expandableSections = document.querySelectorAll(".expandable");
-    const anyOpen = Array.from(expandableSections).some(section =>
-      section.classList.contains("show")
-    );
-
-    footer.classList.toggle("hidden", anyOpen);
-  } else {
-    footer.classList.remove("hidden");
-  }
-}
 
 
 function openModal(id) {
