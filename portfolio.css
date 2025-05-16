@@ -310,7 +310,7 @@ button {
   }
 
   footer {
-    position: fixed;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;
@@ -399,7 +399,7 @@ button {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
     
     section {
         padding: 10px;
