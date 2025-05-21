@@ -713,7 +713,7 @@ button {
 @media (max-width: 600px) {
     
     section {
-        padding: 20px;
+        padding: 30px;
         max-width: 90%;
         font-size: 13px; 
     }
