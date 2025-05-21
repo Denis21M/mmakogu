@@ -8,14 +8,28 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: linear-gradient(135deg, #373b44, #4286f4);
+  overflow: auto;
 }
+
+body::-webkit-scrollbar {
+  width: 1px;
+}
+body::-webkit-scrollbar-thumb {
+  background: rgba(100, 100, 100, 0.3);
+  border-radius: 10px;
+}
+body::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 100, 100, 0.6);
+}
+
 
 .sidebar {
     height: 100%;
     width: 0;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     background-color: #2c3e50;
     overflow-x: hidden;
     transition: 0.5s;
@@ -39,8 +53,8 @@ body {
 
 .sidebar-toggle {
     position: fixed;
-    top: 20px;
-    left: 10px;
+    top: 6px;
+    right: 11px;
     font-size: 20px;
     color: white;
     border: none;
@@ -48,7 +62,7 @@ body {
     cursor: pointer;
     z-index: 2000;
     transition: background-color 0.3s ease;
-    background-color: transparent;
+    background: linear-gradient(135deg, #373b44, #4286f4);
     font-style: normal;
 }
 
@@ -64,30 +78,57 @@ body {
 section {
     background: rgba(255, 255, 255, 0.9);
     margin: auto;
-    padding: 20px;
-    max-width: 1300px;
+    padding: 40px;
+    max-width: 90%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
     opacity: 0.9; 
     overflow: auto;
     margin-bottom: 30px;
 }
 
+section#about {
+  margin-top: 120px;
+}
+
+#projects,
+#references,
+#certification,
+#experience,
+#education {
+  max-width: 50%;
+}
+
+#competences,
+#ongoing {
+  max-width: none;
+  width: 100%;
+  margin: 0 0 30px;
+}
+
+
+.two-column-container {
+  display: flex;
+  gap: 30px;
+  max-width: 90%;
+  margin: auto;
+  align-items: stretch; 
+}
+
+.two-column-container section {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#ongoing ul {
+  flex: 1;
+}
+
 a {
     color: #3498db;
     text-decoration: none;
     font-weight: bold;
-}
-
-.bg-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-image: url('./media/cloud.jpg');
-    background-size: cover;         
-    background-position: center;     
-    background-repeat: no-repeat;    
 }
 
 .overlay {
@@ -104,52 +145,75 @@ h1 {
   color: #3498db;
 }
 
-header {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: lightcyan;
-  padding: 15px;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+header#header {
   position: fixed;
   top: 0;
   left: 0;
-  right: 0;
   width: 100%;
+  background-color: #000; 
+  color: #dbe9f4; 
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
   z-index: 1000;
-  text-align: center;
-  background: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-header > div {
+.header-content {
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 8px 16px;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 100%;
-}
-
-
-#header-text {
-  max-width: 100%;
+  align-items: start;
+  gap: 12px;
+  justify-content: start;
 }
 
 
 #header-photo img {
-  width: 150px;
-  height: 150px;
+  width: 100px !important;
+  height: 100px !important;
   object-fit: cover;
   border-radius: 50%;
-  border: 2px solid #0077b6;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #0077b6; 
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 #header-photo img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 8px 16px rgba(0, 119, 182, 0.4);
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 119, 182, 0.5);
 }
+
+#header-text {
+  text-align: start;
+  margin-top: 30px;
+}
+
+#header-text h1 {
+  font-size: 1.1rem;
+  color: #3498db;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+#header-text p {
+  font-size: 0.8rem;
+  color: #aad4ff;
+  font-weight: 500;
+  margin-top: 2px;
+  white-space: normal; 
+  opacity: 0.85;
+  word-break: break-word; 
+}
+
 
 .modal-img {
   width: 100%;
@@ -165,7 +229,7 @@ header > div {
 .close-btn {
     position: absolute;
     top: 10px;
-    right: 15px;
+    left: 15px;
     font-size: 24px;
     background: none;
     border: none;
@@ -194,7 +258,7 @@ header > div {
 .modal-content {
   background-color: lightcyan;
   margin: 10% auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
   width: 80%;
   max-width: 900px;
@@ -221,39 +285,79 @@ button {
   font-style: italic;
 }
 
-.project-subhead {
+.modal-content p {
+  margin-bottom: 1.2rem; 
+  line-height: 1.6;       
+}
+
+.modal-content ul {
+  margin-left: 1.5rem;   
+  margin-bottom: 1.2rem;  
+  padding-left: 1rem;
+}
+
+.modal-content li {
+  margin-bottom: 0.8rem;
+  line-height: 1.5;
+}
+
+
+.project-section {
+  width: 100%;
+  padding: 1rem;
+  position: relative;
+  overflow-x: auto;
+}
+
+.slider-controls {
+  position: relative;
+}
+
+.project-slider {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.project-card {
+  flex: 0 0 auto;
+  width: 260px; 
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative; 
+  overflow: hidden; 
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.slide-btn {
+  display: none;
+}
+
+.slide-btn:hover {
+  background-color: #2c80b4;
+}
+
+
+.project-head {
   grid-column: 1 / -1;
   font-size: 1.6rem;
   font-weight: 600;
   margin: 0.5rem 0 1rem;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   border-bottom: 2px solid #ccc;
   padding-bottom: 0.5rem;
-}
-
-.project-gallery {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 30px;
-  padding-top: 1rem;
-}
-
-.project-card {
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card img {
@@ -265,7 +369,6 @@ button {
   margin-bottom: 15px;
   transition: transform 0.3s ease;
 }
-
 
 .project-card:hover img {
   transform: scale(1.05);
@@ -302,6 +405,28 @@ button {
   .project-card p a:hover {
     text-decoration: underline;
   }
+
+  .project-card .mobile-view {
+    position: absolute;
+    bottom: 80px;
+    left: 10px;
+    width: 60px; 
+    height: 110px;
+    border: 2px solid #000;
+    z-index: 1;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  }
+
+  .project-card .pc{
+    border: 2px solid #000;
+  }
+
+  .project-card .pc-view{
+    border: 2px solid #000;
+    display: block;
+    width: 100%;
+    height: auto;
+  }
   
   .button-wrapper {
     display: flex;
@@ -310,7 +435,7 @@ button {
   }
 
   footer {
-    position: relative;
+    position: fixed;
     bottom: 0;
     left: 0;
     right: 0;
@@ -361,36 +486,222 @@ button {
   .expandable.show {
     max-height: 500px;
   }
-  
-
-  .project-card {
-    position: relative;
-    margin-bottom: 2rem;
-  }
-  
-  
-  .project-card .mobile-view {
-    position: absolute;
-    bottom: 80px;
-    left: 10px;
-    width: 60px; 
-    height: 110px;
-    border: 2px solid #000;
-    z-index: 2;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  }
-
-  .project-card .pc{
-    border: 2px solid #000;
-  }
-
-  .project-card .pc-view{
-    border: 2px solid #000;
-  }
+ 
   
   main {
-    margin-top: 220px; 
+    margin-top: 50px;
+    margin-bottom: 90px;
+    position: relative; 
+    z-index: 1;        
+    overflow: auto;     
   }
+
+
+  #tools {
+    background-color: #f9f9f9;
+  }
+  
+  .logo-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .logo-item {
+    text-align: center;
+  }
+  
+  .logo-item img {
+    max-width: 80px;
+    height: auto;
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+  
+  .logo-item span {
+    display: block;
+    font-size: 0.9rem;
+    color: #333;
+  }
+
+  .certref-container {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem;
+  }
+  
+  .certref-card {
+    display: inline-block;
+    text-align: center;
+    width: 200px;
+    margin: 1rem;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  .certref-card:hover {
+    transform: rotate(0deg) scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  }
+  
+  .certref-card figure {
+    margin: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    background-color: #fff;
+  }
+  
+  .certref-card img {
+    width: 200px;         
+    height: 150px;        
+    object-fit: cover;    
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .certref-card:hover img {
+    transform: scale(1.05); 
+  }
+  
+  .certref-card figcaption {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    color: #333;
+}
+  
+  
+#certModal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  cursor: zoom-out;
+}
+
+
+#certModal img {
+  max-width: 80vw;
+  max-height: 80vh;
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+  object-fit: contain;
+}
+
+.slide-btn {
+  display: none;
+}
+
+.scroll-button {
+  display: none !important;
+}
+
+
+@media (max-width: 600px) {
+  #header-photo img {
+    width: 50px;
+    height: 50px;
+  }
+
+  #header-text h1 {
+    font-size: 1.4rem;
+  }
+
+  #header-text p {
+    font-size: 0.8rem;
+  }
+
+  .two-column-container {
+    flex-direction: column;
+  }
+
+  .two-column-container section {
+    max-width: 100%;
+  }
+
+  #header-text {
+    margin-top: 10px;
+  }
+  
+}
+
+
+@media screen and (max-width: 900px) {
+  .slide-btn {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+  }
+
+  .slide-btn:hover{
+    background-color: rgba(200, 200, 200, 0.9);
+  }
+
+  .slide-btn.left {
+    left: 0;
+  }
+
+  .slide-btn.right {
+    right: 0;
+  }
+
+  .slider-controls {
+    position: relative;
+  }
+  
+  .scroll-button:hover {
+    background-color: rgba(200, 200, 200, 0.9);
+  }
+  
+  .scroll-button.left {
+    left: 0;
+  }
+  
+  .scroll-button.right {
+    right: 0;
+  }
+
+  .certref-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .scroll-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    border: none;
+    font-size: 1.5rem;
+    padding: 0.3rem 0.6rem;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    transition: background 0.3s;
+    display: inline-block !important;
+  }
+}
 
   
 @keyframes fadeIn {
@@ -402,41 +713,21 @@ button {
 @media (max-width: 600px) {
     
     section {
-        padding: 10px;
-        width: 90%;
-        max-width: 800px;
-        font-size: 13px;
-        margin-top: 30px;
+        padding: 20px;
+        max-width: 90%;
+        font-size: 13px; 
     }
 
-      header > div {
-        flex-direction: column;
-        max-width: 80%;
-        align-items: center;
-        text-align: center;
-        padding-right: 35px;
-        gap: 0px;
-      }
+    #projects,
+    #references,
+    #certification,
+    #experience,
+    #education {
+  max-width: 90%;
+}
 
-      .sidebar-toggle {
-        top: 10px;
-        left: 0.8px;
-    }
-
-
-    #header-text {
-      font-size: small;
-      text-align: center;
-    }
-
-    #header-photo img {
-      width: 100px;
-      height: 100px;
-    }
-
-    main {
-      
-      margin-top: 300px; 
+    #competences {
+      margin-bottom: 5px;
     }
 
     .footer-text {
@@ -461,25 +752,3 @@ button {
 }
 
 
-@media (max-width: 768px) {
-  .project-gallery {
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 20px;
-  }
-}
-
-@media (max-width: 480px) {
-  .project-card img {
-    height: 180px;
-  }
-
-  .project-card {
-    padding: 15px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .project-gallery {
-    grid-template-columns: repeat(4, 1fr);
-  }
-}

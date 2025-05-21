@@ -13,484 +13,292 @@
 </head>
 
 <body>
-  <header>
-    <div>
+  <header id="header">
+    <div class="header-content">
       <div id="header-photo">
-        <img src="./media/prof.jpg" alt="Profile Photo of Bacon"/>
+        <img src="./media/prof.jpg" alt="Profile Photo of Bacon Chinazom Mmakogu" />
       </div>
       <div id="header-text">
-        <h1>Bacon Mmakogu (He/Him)</h1>
-        <p>DevOps & Cloud Specialist | Junior Frontend Web Developer</p>
-        
+        <h1>Bacon Chinazom Mmakogu</h1>
+        <p>DevOps & Cloud Specialist | Frontend Developer</p>
       </div>
     </div>
   </header>
-
+  
 <main>
-  <div class="bg-image"></div>
-
   <div class="overlay"></div>
 
     <section id="about" class="fade-in">
-        <h2>💡 Professional Summary</h2>
         <div>
-        
-            <p>
-              I am a highly enthusiastic DevOps & Cloud Specialist with background in frontend development and hands-on experience across the entire software delivery lifecycle. My intensive training in automation, containerization, cloud infrastructure, monitoring & logging, AWS and Azure cloud has equipped me with the skills to build, deploy, and scale applications reliably, efficiently and securely. I transitioned from logistics and customer advisory to DevOps and cloud practise, frontend web development due to my passion for building scalable cloud & web solutions.
-            </p>
-            <h3>🧠 Core Competencies</h3>
-            <ul>
-              <li>DevOps & Agile: Lean principles, value streams, continuous feedback, and DevOps KPIs.</li>
-              <li>Cloud Computing: AWS (EC2, Lambda, RDS, S3, IAM) & Azure (AKS, RBAC, T-SQL, Entra, Intune, SCCM).</li>
-              <li>Automation & IaC: Terraform, Ansible, HCL, modules, playbooks, Jinja2.</li>
-              <li>Containerization & Kubernetes: Docker, Kubernetes, EKS/AKS, Helm, multi-tier app deployment.</li>
-              <li>CI/CD Automation: GitHub Actions,GitLab, Jenkins, SonarQube, automated testing, and secrets management.</li>
-              <li>Monitoring & Logging: Prometheus, Grafana, Loki, ELK Stack.</li>
-              <li>Frontend web development: JavaScript, React, HTML, CSS and SQL.</li>
-              <li>Customer Support & IT Expertise: Experienced in resolving complex issues using Agent connect, Avaya, CRM, UBD, Jira.</li>  
-              <li>System support and administration in Linux environment</li>
-            </ul>
-      
-            <h3>📌 Tools & Tech Stack</h3>
-            <ul>
-              <li>Cloud: AWS, Azure</li>
-              <li>IaC & Config: Terraform, Ansible, CloudFormation</li>
-              <li>Containerization: Docker, Kubernetes, EKS, AKS, minikube, k9s, CLI, Networking</li>
-              <li>CI/CD: GitHub Actions, GitLab, Jenkins and SonarQube</li>
-              <li>Linux CLI: Navigations, permissions, user/group management, systems and server's administration</li>
-              <li>Languages: JavaScript (React), HTML, CSS, Bash, YAML, HCL, Golang</li>
-              <li>Databases: PostgreSQL, RDS, T-SQL, AWS S3 bucket, Azure storage, Stateless vs Stateful architecture, PVC</li>
-              <li>Monitoring & Logging: Prometheus, Grafana, Loki, ELK</li>
-              <li>Version Control: Git, GitHub</li>
-              <li>Team play: Scrum and Jira</li>
-              <li>Scalable App Architectures: Load Balancing, Caching, CDN integration</li>
-              <li>Scheduling jobs: Crontab, SCP</li>
-              <li>Web Servers: Nginx, Apache</li>
-              <li>Service Connectivity: Microservices, APIs like REST, SOAP and Webhook, monitoring and troubleshooting APIs</li>
-              <li>Web Request file formats: JSON, HTML and XML</li>
-              <li>Azure Intune, Entra and SCCM</li>
-            </ul>   
-                
-          </div>
-          
+          <h2 class="project-head">Professional Summary</h2>
+          <p>
+              I am a highly enthusiastic DevOps & Cloud Specialist with background in frontend development and hands-on experience across the entire software delivery lifecycle. My intensive training in automation, containerization, cloud infrastructure, monitoring & logging, AWS and Azure cloud has equipped me with the skills to build, deploy, and scale applications reliably, efficiently and securely. I transitioned from logistics and customer advisory to DevOps and cloud practise, frontend web development, a journey driven by passion for building scalable cloud & web solutions.
+          </p>
         </div>
+    </section>
+
+    <div class="two-column-container">
+      <section id="competences" class="fade-in">
+        <h2 class="project-head">Core Competencies</h2>
+        <ul>
+          <li>Infrastructure as Code (IaC) with Terraform & ARM Templates</li>
+          <li>CI/CD Pipeline Design & Implementation using GitHub Actions & Azure DevOps</li>
+          <li>Kubernetes Cluster Deployment & Management (AKS) & (EKS)</li>
+          <li>Docker Containerization & Image Management</li>
+          <li>Cloud Resource Provisioning on Azure & AWS</li>
+          <li>Load Balancing & High Availability Architecture</li>
+          <li>Secrets & Identity Management using Azure Key Vault & AWS IAM</li>
+          <li>Log Aggregation & Visualization with ELK Stack and Grafana</li>
+          <li>Monitoring with Prometheus & Azure Monitor</li>
+          <li>Version Control & Collaboration using Git & GitHub</li>
+          <li>Security Hardening & Compliance in Cloud Environments</li>
+          <li>Application Deployment & Scaling in Kubernetes</li>
+          <li>Remote Management & Endpoint Configuration with Intune & SCCM</li>
+          <li>Backup & Disaster Recovery Strategies in Cloud</li>
+          <li>Performance Optimization of Cloud Workloads</li>
+          <li>Customer Support & IT Support Expertise</li>
+          <li>System administration in Linux environment</li>
+          <li>Deployment troubleshooting to ensure error-free applications</li>
+        </ul>
       </section>
-
-    <section id="experience" class="fade-in">
-        <h2>⌨🖱 Work Experience</h2>
-        <div>
-
-        <ul>
-            <li>
-                <strong>DevOps and Cloud Specialist</strong> - Freelance (November 2024 - Present)
-                <button onclick="openModal('exp1')">Read</button>
-            </li>  
-            <li>
-                <strong>Fulfillment Associate (Special Operations)</strong> - Hive Technologies GmbH Berlin, Germany (November 2023 - November 2024)
-                <button onclick="openModal('exp2')">Read</button>
-            </li>
-            <li>
-                <strong>Customer Advisor</strong> - Concentrix GmbH Berlin, Germany (October 2022 - January 2024)
-                <button onclick="openModal('exp3')">Read</button>
-            </li>
-            <li>
-                <strong>Business Management Intern</strong> - Dimitra International Warsaw, Poland (November 2022 - April 2023)
-                <button onclick="openModal('exp4')">Read</button>
-            </li>
-            <li>
-                <strong>Warehouse Employee</strong> - YoungCapital Berlin, Germany (January 2021-October 2022)
-                <button onclick="openModal('exp5')">Read</button>
-            </li>
-            <li>
-                <strong>Shipping Auditor/Warehouse Employee</strong> - Adecco for Amazon Berlin, Germany (January 2019 - October 2021)
-                <button onclick="openModal('exp6')">Read</button>
-            </li>
-        </ul>
-      </div>
-       
-    </div>
-    </section>
-
-    <div id="exp1" class="modal">
-      <div class="modal-content">
-        <span class="close" onclick="closeModal('exp1')">&times;</span>
-        <h3>DevOps and Cloud Specialist - Freelance</h3>
-        <p>
-          I provide services in the areas of DevOps and Cloud Operations. I am available for on-premise assignments and thus open to travel with an arrangement.
-        </p>
-          <h3>🎯 Role Highlights:</h3>
-          <ul>
-            <li>
-              Design and provision scalable cloud infrastructure on Azure and AWS, improving system availability and cost-efficiency.
-            </li>
-            <li>
-              Deploy containerize microservices applications on Amazon EKS and Azure AKS, enabling high availability and seamless scaling.
-            </li>
-            <li>
-              Deployment of both single static website pages and microservice apps on EC2, AKS and EKS Clusters
-            </li>
-            <li>
-              Automate CI/CD pipelines using GitHub Actions (including secret management), Jenkins, and Golang, accelerating delivery cycles and reducing manual errors sensitive data exposure.
-            </li>
-            <li>
-              Implement full-stack observability with Prometheus and ELK Stack, enhancing issue detection and reducing troubleshooting time by 50%.
-            </li>
-            <li>
-              Reduce infrastructure deployment time by 35% using Terraform code modularization, improving reusability and team efficiency.
-            <li>
-              Endpoint management (intune and azure entra)
-            </li>
-          </ul>
-          <h3>🛠️ Key Skills:</h3>
-        </p>
-          Terraform and ansible (Iac) | Docker | Kubernetes | Azure Entra and Intune | Aws | GitHub action | CI-CD pipeline | Linus system administration | Azure cloud
-        </p>
-      </div>
-    </div>
-
-      
-      <div id="exp2" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('exp2')">&times;</span>
-          <h3>Fulfillment Associate - Hive Technologies</h3>
-          <p>
-            As a Fulfillment Associate at Hive Technologies, I played a key role in ensuring smooth and efficient daily operations across logistics and supply chain processes. I handled critical functions such as incident resolution, inventory management, and B2B support while maintaining high standards of accuracy and delivery speed.
-          </p>
-            <h3>🎯 Role Highlights:</h3>
-            <ul>
-              <li>
-            Resolved incidents and operational issues swiftly to minimize downtime and maintain workflow continuity.
-              </li>
-              <li>
-            Managed end-to-end order processing, shipment tracking, and inventory analysis to ensure timely and accurate fulfillment.
-              </li>
-              <li>
-            Provided hands-on hardware support and executed complex B2B tasks, including kitting and handling custom declarations.
-              </li>
-              <li>
-            Monitored key performance indicators (KPIs) and implemented process improvements to optimize delivery efficiency.
-              </li>
-              <li>
-            Conducted onboarding and supervised training for new hires, ensuring a smooth transition into daily operations.
-              </li>
-              <li>
-            Collaborated cross-functionally with internal teams to enhance accuracy, speed, and overall operational performance.
-              </li>
-            </ul>
-            <h3>🛠️ Key Skills:</h3>
-          </p>
-            Proficiency in English | Multi-tasking | Problem-solving | Hive Shipping Software | Order Processing | Inventory Management | Computer Literacy | Cross-functional Teamwork | Customer Service | Attention to Detail | Time Management | Adaptability | Training & Onboarding | Process Improvement | KPI Monitoring | B2B Support | Hardware Support | Incident Resolution
-          </p>
-        </div>
-      </div>
-
-      <div id="exp3" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('exp3')">&times;</span>
-          <h3>Customer Advisor - Concentrix</h3>
-          <p>
-            As a Customer Advisor at Concentrix GmbH, I delivered high-quality, multi-channel support with a strong focus on technical troubleshooting, customer satisfaction, and operational excellence. I worked across service desks, aligning with ITIL best practices, to manage complex service requests and drive resolution efficiency.
-          </p>
-            <h3>🎯 Role Highlights:</h3>
-            <ul>
-            <li>
-            Delivered multi-channel support including chat, email, and phone, effectively managing incidents, service requests, and account resolutions.
-            </li>
-            <li>
-            Provided expert-level technical troubleshooting, consultation, and support for both in-house and third-party solutions.
-            </li>
-            <li>
-            Executed manual payments, supported marketing operations, and analyzed advertising campaign performance for improved ROI.
-            </li>
-            <li>
-            Handled escalated issues while consistently adhering to SLAs, ensuring high levels of customer satisfaction and loyalty.
-            </li>
-            <li>
-            Collaborated with cross-functional teams to identify bottlenecks, drive process improvements, and optimize workflows.
-            </li>
-          </ul>
-            <h3>🛠️ Key Skills:</h3>
-          <p>
-            Proficiency in English | ITIL Practices | CRM (Zendesk, Agent Connect) | Technical Troubleshooting | Analytical Thinking | Customer Relationship Management | Strong Communication | Ownership & Accountability | Problem Solving
-          </p>
-        </div>
-      </div>
-      
-      <div id="exp4" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('exp4')">&times;</span>
-          <h3>Business Management Intern - Dimitra International</h3>
-          <p>
-            As a Business Management Intern at Dimitra International, I contributed to strategic planning and marketing efforts aimed at boosting brand presence and operational efficiency. I gained hands-on experience across business planning, financial analysis, and digital marketing, supporting both internal teams and external communications.
-          </p>
-            <h3>📈 Role Highlights:</h3>
-            <ul>
-            <li>
-            Prepared detailed business and financial plans to inform strategic decisions and support growth initiatives.
-            </li>
-            <li>
-            Assisted in the design and execution of advertising campaigns, helping to expand brand awareness and market reach.
-            </li>
-            <li>
-            Managed and optimized social media platforms, boosting audience engagement through data-informed content strategies.
-            </li>
-            <li>
-            Drafted, edited, and reviewed key business documents, ensuring clarity, professionalism, and alignment with brand voice.
-            </li>
-            </ul>
-            <h3>🛠️ Key Skills:</h3>
-          <p>
-            Business Planning | Financial Analysis | Social Media Management | Advertising Campaign Support | Document Writing | Attention to Detail | Strategic Thinking | Communication Skills | Team Collaboration | Problem Solving | Time Management | Adaptability | Customer Service | Data Analysis | Digital Marketing | Brand Awareness   
-          </p>
-        </div>
-      </div>
-
-      <div id="exp5" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('exp5')">&times;</span>
-          <h3>Warehouse Employee - YoungCapital</h3>
-          <p>
-            As a Warehouse Employee, I played a vital role in the order fulfillment process for Breimeinster GmbH’s online grocery operations. Working in a fast-paced environment, I ensured accurate picking, maintained quality standards, and supported team efficiency to meet customer satisfaction goals.
-          </p>
-            <h3>📦 Role Highlights:</h3>
-            <ul>
-            <li>
-            Worked closely with supervisors to accurately fulfill online grocery orders in a timely manner.
-            </li>
-            <li>
-            Maintained high standards for product quality and handling throughout the picking and delivery process.
-            </li>
-            <li>
-            Contributed to a smooth and coordinated workflow by actively collaborating with team members in the fulfillment center.
-            </li>
-            <li>
-            Prioritized efficiency and attention to detail to meet tight deadlines and uphold service expectations.
-            </li>
-            </ul>
-            <h3>🛠️ Key Skills:</h3>
-        <p>
-            Order Fulfillment | Workflow Optimization | Team Collaboration | Attention to Detail | Time Management | Customer Service Orientation
-        </p>
-        </div>
-      </div>
-      
-      <div id="exp6" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('exp6')">&times;</span>
-          <h3>Shipping Auditor/Warehouse Employee - Adecco for Amazon</h3>
-          <p>
-            At Amazon.de, through Adecco GmbH, I served as a Shipping Auditor and Warehouse Employee responsible for ensuring the accuracy and efficiency of outbound logistics. I supported quality control efforts, helped maintain operational flow, and ensured that all packages met Amazon’s high standards for timely and accurate delivery.
-          </p>
-            <h3>📦 Role Highlights:</h3>
-            <ul>
-            <li>
-            Performed detailed shipment audits to verify package completeness and ensure on-time dispatch.
-            </li>
-            <li>
-            Detected and reported discrepancies, collaborating with logistics management for swift resolution.
-            </li>
-            <li>
-            Maintained precise shipment records and consistently upheld internal quality control procedures.
-            </li>
-            <li>
-            Supported warehouse operations by combining accuracy with speed, helping to optimize delivery timelines.
-            </li>
-            </ul>
-            <h3>🛠️ Key Skills:</h3>
-        <p>
-            Shipment Auditing | Attention to Detail | Problem Resolution | Proficiency in Excel | Communication Skills | Data Accuracy | Affinity for Numbers | Logistics Support | Time Management | Team Collaboration | Customer Service Orientation | Adaptability | Process Improvement    
-        </p>
-        </div>
-      </div>
-
-    <section id="education" class="fade-in">
-        <h2>👨🏽‍🎓 Education & Training</h2>
-        <div>
-          
-        <ul>
-            <li>
-                <strong>DevOps and Cloud Computing</strong> - Ironhack Berlin (November 2024 - April 2025)
-                <button onclick="openModal('edu1')">Read</button>
-            </li>
-            <li>
-                <strong>Frontend Web Development</strong> - Mimo.org (March 2022 - November 2024)
-                <button onclick="openModal('edu2')">Read</button>
-            </li>
-            <li>
-                <strong>Bachelor of Arts in International Business</strong> - Hochschule für Technik und Wirtschaft, Berlin (April 2019 - November 2023)
-                <button onclick="openModal('edu3')">Read</button>
-            </li>
-            <li>
-                <strong>Bachelor of Science in Animal and Env. Biology</strong> - University of Port Harcourt, Nigeria (November 2010 - May 2015)
-                <button onclick="openModal('edu4')">Read</button>
-            </li>
-        </ul>
-      </div>
-       
-    </div>
-    </section>
-
-    <div id="edu1" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('edu1')">&times;</span>
-          <h3>🎓 DevOps and Cloud Computing - Ironhack</h3>
-          <p>
-            During this comprehensive and hands-on training program, I gained deep expertise in core DevOps and Cloud Engineering practices. I mastered the tools, technologies, and methodologies required to build, deploy, automate, and monitor scalable applications in real-world environments. The training covered the entire software delivery lifecycle, from Infrastructure as Code and CI/CD pipelines to container orchestration and cloud architecture across both AWS and Azure platforms.
-          </p>
-          <ul>
-          <li>
-            I developed strong competencies in Infrastructure as Code using Terraform and Ansible 🛠️
-          </li>
-          <li>
-            I gained hands-on experience with containerization and orchestration using Docker 🐳 and Kubernetes (EKS & AKS)
-          </li>
-          <li>
-            I automated build and deployment workflows through GitHub Actions 🔁 and SonarQube
-          </li>
-          <li>
-            I deepened my skills on the implementation of effective monitoring and logging stacks including Prometheus, Grafana, Loki, and the ELK Stack 📊
-          </li>
-          <li>
-            I gained scripting and automation skills across Bash, YAML, Golang, and HCL, with practical application in deploying modern web apps 🌐 using Ingress Controllers, Load Balancers, and TLS/SSL configuration.
-          </li>
-          <li>
-            On the cloud side, I worked extensively with AWS services such as IAM, EC2, RDS, S3, VPC, and CloudFormation, as well as Azure services such as AKS, RBAC, T-SQL, Entra, Intune and Governance controls. These tools enabled me to architect, deploy, and manage cloud-native solutions with confidence ☁️.
-          </li>
-          </ul>
-          <p>
-            Throughout the program, I completed numerous small-scale projects to sharpen my skills and reinforce best practices. Additionally, I’ve delivered three major microservices-based applications, featured in my portfolio, that demonstrate my ability to provision infrastructure, deploy containerized apps, implement monitoring solutions, and secure and scale cloud systems.
-            I am confident, capable, and fully equipped with the hands-on experience and technical knowledge needed to thrive as a DevOps or Cloud Engineer in today’s fast-paced tech industry. Let’s build something amazing!
-          </p>
-          <p> 
-            <strong>Key Skills:</strong> DevOps | Cloud Computing | Infrastructure as Code | CI/CD Automation | Containerization | Kubernetes | AWS | Azure | Monitoring & Logging | Scripting & Automation | Agile Methodologies   
-          </p>
-        </div>
-      </div>
-      
-      <div id="edu2" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('edu2')">&times;</span>
-          <h3>Frontend Web Development - Mimo</h3>
-          <p>
-            As part of my journey into tech, I completed an in-depth training program in Front-End Development with Mimo, where I developed a strong foundation in building dynamic and responsive web interfaces. The program covered essential technologies such as JavaScript, HTML, and CSS, alongside tools and platforms like Git, GitHub, and Visual Studio Code. I also gained hands-on experience with React at an intermediate level for delivering interactive user experiences.
-          </p>
-          <p>
-            Throughout the course, I applied industry best practices in responsive design, version control, and web standards. I built couple of web solutions that demonstrate my ability to translate ideas into real, functional applications which includes this portfolio website you have visited. These projects not only reflect my growing skill set but also my attention to detail and enthusiasm for crafting clean, accessible, and user-friendly interfaces.
-          </p>
-          <p>
-            💡 This training served as a crucial stepping stone in my transition into IT and Cloud Computing, giving me a solid web development foundation to complement my DevOps skill set.
-          </p>
-        </div>
-      </div>
-
-      <div id="edu3" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('edu3')">&times;</span>
-          <h3>Bachelor of Arts in International Business - Hochschule für Technik und Wirtschaft</h3>
-          <p>
-            This interdisciplinary program provided a solid academic foundation in the key principles of international business, combining theoretical knowledge with practical insights into the global economy. The curriculum covered critical areas such as international trade, cross-cultural management, international finance, strategic marketing, and global supply chains.
-          </p>
-          <p>
-            Through case studies, team projects, and real-world applications, I developed strong analytical and strategic thinking skills. The program also offered elective modules, allowing me to tailor my studies according to my career interests and broaden my global perspective.
-          </p>
-          <p>
-            🌍 Studying in an international environment equipped me with the cultural awareness, communication skills, and business acumen essential for succeeding in diverse, fast-paced industries. It also laid the groundwork for my professional development and eventual career transition into the tech and cloud space.
-          </p>
-        </div>
-      </div>
-      
-      <div id="edu4" class="modal">
-        <div class="modal-content">
-          <span class="close" onclick="closeModal('edu4')">&times;</span>
-          <h3>Bachelor of Science in Animal and Env. Biology - University of Port Harcourt</h3>
-          <p>
-            This rigorous science-based program provided in-depth training in the biological sciences, with a particular focus on faunal studies and ecosystem dynamics. The curriculum emphasized the role of animals in the environment and their interactions with both biotic and abiotic components of ecosystems, laying a strong foundation for sustainable resource management and socio-economic development.
-          </p>
-          <p>
-            Throughout the program, I gained solid expertise in ecology, physiology, biodiversity, conservation, and environmental monitoring, complemented by core scientific disciplines such as biochemistry, microbiology, and applied statistics. The program also emphasized fieldwork, research methods, and data analysis, equipping me with analytical, observational, and scientific problem-solving skills.
-          </p>
-          <p>
-            This educational journey deepened my understanding of the natural world while strengthening my ability to approach complex systems with a holistic mindset, an asset that continues to influence my work in tech, systems thinking, and cloud-based infrastructure today.
-          </p>
-        </div>
-      </div>
-
-
-    <section id="certification" class="fade-in">
-        <h2>🏆 Professional Certifications</h2>
-        <div>
-        
-      <ul>
-        <li><a href="./media/DevOps-Cert.pdf" target="_blank">DevOps and Cloud Computing (2025)</a>- Ironhack.com</li>
-        <li><a href="./media/sql.pdf" target="_blank">SQL (2024)</a>- Mimo.org</li>
-        <li><a href="./media/frontend.pdf" target="_blank">Front-end web development(2024)</a>- Mimo.org</li>
-        <li><a href="./media/BMC.pdf" target="_blank">BMC(2020)</a>- Bloomberg</li>
-      </ul>
-        </div>
-        
-      </div>
-      </section>
-
-    <section id="reference" class="fade-in">
-        <h2>📝 Referees</h2>
-        <div>
-          
-        <ul>
-            <li><a href="./media/dimitra.pdf" target="_blank" rel="noopener noreferrer">Jesus Alamo</a> - Dimitra Intl. SRL - Legal and Business Consultancy</li>
-            <li><a href="./media/concentrix.pdf" target="_blank" rel="noopener noreferrer">Malgorzata Kirkiewicz</a> - Concentrix Global Services GmbH</li>
-            <li><a href="./media/HTW.pdf" target="_blank" rel="noopener noreferrer">Prof. Dr. Tetiana Paientko</a> - HTW-Berlin</li>
-        </ul>
-      </div>
-      
-    </div>
-    </section>
-
-    <section id="ongoing" class="fade-in">
-      <h2>👨🏽‍💻 See Ongoing Projects</h2>
-      <div>
-        
-    <ul>
-      <li><a href="http://52.158.116.219/">Expensy App</a> - AKS Microservice Project (may, 2025)</li>
-      <li>Paid Exam: AWS Certified Solutions Architect (Associate) (2025)</a> - aws.amazon.com</li>
-      <li>Paid Exam: Microsoft Certified Azure Administrator Associate (2025)</a> - learn.microsoft.com</li>
-    </ul>
-    </div>
     
+      <section id="ongoing" class="fade-in">
+        <h2 class="project-head">See Ongoing Projects</h2>
+        <ul>
+          <li><a href="https://github.com/Denis21M/Expensy-End-to-End-DevOps-Deployment">Expensy App</a> - AKS Microservice Project (May, 2025)</li>
+          <li><strong>In Preparation for Paid Exam:</strong> AWS Certified Solutions Architect (Associate) (2025)</li>
+          <li><strong>In Preparation for Paid Exam:</strong> Microsoft Certified Azure Administrator Associate (2025)</li>
+        </ul>
+      </section>
   </div>
-    </section>
-
-    <footer id="contact" class="footer">
-      <div class="contact-icons">
-        <a href="mailto:Baconchinazom@yahoo.com" target="_blank" title="Email">
-          <i class="fas fa-envelope"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/mmakogu" target="_blank" title="LinkedIn">
-          <i class="fab fa-linkedin"></i>
-        </a>
-        <a href="https://github.com/Denis21M" target="_blank" title="GitHub">
-          <i class="fab fa-github"></i>
-        </a>
-        <a href="tel:+4915734379121" title="Phone">
-          <i class="fas fa-phone"></i>
-        </a>
-      </div>
-      <div class="footer-text">
-        © 2025 Bacon Chinazom Mmakogu
-      </div>
-    </footer>
-
-  </main>
     
-    <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+
+      <section id="tools" class="fade-in">
+              <h2 class="project-head">Tech Stack</h2>
+            
+                <div class="logo-grid">
+                  <!-- AWS -->
+                  <div class="logo-item">
+                    <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/aws-color.png" alt="AWS Logo" />
+                    <span>AWS</span>
+                  </div>
+                  <!-- Azure -->
+                  <div class="logo-item">
+                    <img src="https://img.icons8.com/?size=96&id=VLKafOkk3sBX&format=png" alt="Azure Logo" />
+                    <span>Azure</span>
+                  </div>
+                  <!-- Terraform -->
+                  <div class="logo-item">
+                    <img src="https://icon.icepanel.io/Technology/svg/HashiCorp-Terraform.svg" alt="Terraform Logo" />
+                    <span>Terraform</span>
+                  </div>
+                  <!-- Ansible -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Ansible_logo.svg/384px-Ansible_logo.svg.png" alt="Ansible Logo" />
+                    <span>Ansible</span>
+                  </div>
+                  <!-- CloudFormation -->
+                  <div class="logo-item">
+                    <img src="https://icon.icepanel.io/AWS/svg/Management-Governance/CloudFormation.svg" alt="CloudFormation Logo" />
+                    <span>CloudFormation</span>
+                  </div>
+                  <!-- Docker -->
+                  <div class="logo-item">
+                    <img src="https://img.icons8.com/?size=96&id=22813&format=png" alt="Docker Logo" />
+                    <span>Docker</span>
+                  </div>
+                  <!-- Kubernetes -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/39/Kubernetes_logo_without_workmark.svg/926px-Kubernetes_logo_without_workmark.svg.png" alt="Kubernetes Logo" />
+                    <span>Kubernetes</span>
+                  </div>
+                  <!-- EKS -->
+                  <div class="logo-item">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoIH5-401bMBTkSlsc0vpwhglece_txWm8XQ&s" alt="EKS Logo" />
+                    <span>EKS</span>
+                  </div>
+                  <!-- AKS -->
+                  <div class="logo-item">
+                    <img src="https://www.svgrepo.com/show/448269/azure-aks.svg" alt="AKS Logo" />
+                    <span>AKS</span>
+                  </div>
+                  <!-- Minikube -->
+                  <div class="logo-item">
+                    <img src="https://cloud.githubusercontent.com/assets/19435/16920860/9e08434a-4d0f-11e6-8908-81c62d614756.png" alt="Minikube Logo" />
+                    <span>Minikube</span>
+                  </div>
+                  <!-- K9s -->
+                  <div class="logo-item">
+                    <img src="https://github.com/derailed/k9s/raw/master/assets/k9s.png" alt="K9s Logo" />
+                    <span>K9s</span>
+                  </div>
+                  <!-- GitHub Actions -->
+                  <div class="logo-item">
+                    <img src="https://icon.icepanel.io/Technology/svg/GitHub-Actions.svg" alt="GitHub Actions Logo" />
+                    <span>GitHub Actions</span>
+                  </div>
+                  <!-- GitLab -->
+                  <div class="logo-item">
+                    <img src="https://about.gitlab.com/images/press/logo/png/gitlab-icon-rgb.png" alt="GitLab Logo" />
+                    <span>GitLab</span>
+                  </div>
+                  <!-- Jenkins -->
+                  <div class="logo-item">
+                    <img src="https://logos-world.net/wp-content/uploads/2023/12/Jenkins-Symbol.png" alt="Jenkins Logo" />
+                    <span>Jenkins</span>
+                  </div>
+                  <!-- SonarQube -->
+                  <div class="logo-item">
+                    <img src="https://logowik.com/content/uploads/images/sonarqube7722.logowik.com.webp" alt="SonarQube Logo" />
+                    <span>SonarQube</span>
+                  </div>
+                  <!-- JavaScript -->
+                  <div class="logo-item">
+                    <img src="https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo.png" alt="Prometheus Logo" />
+                    <span>JavaScript</span>
+                  </div>
+                  <!-- Prometheus -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Prometheus_software_logo.svg/2066px-Prometheus_software_logo.svg.png" alt="Prometheus Logo" />
+                    <span>Prometheus</span>
+                  </div>
+                  <!-- Grafana -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a1/Grafana_logo.svg/768px-Grafana_logo.svg.png?20230113183101" alt="Grafana Logo" />
+                    <span>Grafana</span>
+                  </div>
+                  <!-- Loki -->
+                  <div class="logo-item">
+                    <img src="https://grafana.com/media/docs/loki/logo-grafana-loki.png" alt="Loki Logo" />
+                    <span>Loki</span>
+                  </div>
+                  <!-- ELK -->
+                  <div class="logo-item">
+                    <img src="https://static-www.elastic.co/v3/assets/bltefdd0b53724fa2ce/blt0ee60d54428ec0b2/614b1cea69b7947c1b3ae7c5/illustration-logstash-white-bg-608x404.png" alt="ELK Logo" />
+                    <span>ELK</span>
+                  </div>
+                  <!-- Git -->
+                  <div class="logo-item">
+                    <img src="https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png" alt="Git Logo" />
+                    <span>Git</span>
+                  </div>
+                  <!-- GitHub -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Octicons-mark-github.svg/1200px-Octicons-mark-github.svg.png?20180806170715" alt="GitHub Logo" />
+                    <span>GitHub</span>
+                  </div>
+                  <!-- Scrum -->
+                  <div class="logo-item">
+                    <img src="https://static-00.iconduck.com/assets.00/scrum-icon-512x512-111dr7de.png" alt="Scrum Logo" />
+                    <span>Scrum</span>
+                  </div>
+                  <!-- Jira -->
+                  <div class="logo-item">
+                    <img src="https://static-00.iconduck.com/assets.00/jira-icon-2048x2048-nmec2job.png" alt="Jira Logo" />
+                    <span>Jira</span>
+                  </div>
+                  <!-- Crontab -->
+                  <div class="logo-item">
+                    <img src="https://cdn.iconscout.com/icon/premium/png-256-thumb/cron-job-7489742-6226380.png" alt="Crontab Logo" />
+                    <span>Crontab</span>
+                  </div>
+                  <!-- SCP -->
+                  <div class="logo-item">
+                    <img src="data:image/png;base64,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" alt="SCP Logo" />
+                    <span>SCP</span>
+                  </div>
+                  <!-- Nginx -->
+                  <div class="logo-item">
+                    <img src="https://www.svgrepo.com/show/373315/nginx-opened.svg" alt="Nginx Logo" />
+                    <span>Nginx</span>
+                  </div>
+                  <!-- Apache -->
+                  <div class="logo-item">
+                    <img src="https://images.icon-icons.com/2699/PNG/512/apache_logo_icon_168630.png" alt="Apache Logo" />
+                    <span>Apache</span>
+                  </div>
+                  <!-- REST API -->
+                  <div class="logo-item">
+                    <img src="https://www.opc-router.com/wp-content/uploads/2020/05/REST_socialmedia.jpg" alt="REST API Logo" />
+                    <span>REST API</span>
+                  </div>
+                  <!-- SOAP API -->
+                  <div class="logo-item">
+                    <img src="https://www.shutterstock.com/image-illustration/soap-acronym-protocol-exchanging-structured-260nw-2560423991.jpg" alt="SOAP API Logo" />
+                    <span>SOAP API</span>
+                  </div>
+                  <!-- Webhook -->
+                  <div class="logo-item">
+                    <img src="https://www.svix.com/resources/assets/images/color-webhook-240-1deccb0e365ff4ea493396ad28638fb7.png" alt="Webhook Logo" />
+                    <span>Webhook</span>
+                  </div>
+                  <!-- JSON -->
+                  <div class="logo-item">
+                    <img src="https://cdn-icons-png.flaticon.com/512/136/136525.png" alt="JSON Logo" />
+                    <span>JSON</span>
+                  </div>
+                  <!-- HTML -->
+                  <div class="logo-item">
+                    <img src="https://www.w3.org/html/logo/downloads/HTML5_1Color_Black.svg" alt="HTML Logo" />
+                    <span>HTML</span>
+                  </div>
+                  <!-- XML -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/XML_icon.svg/54px-XML_icon.svg.png?20070615110023" alt="XML Logo" />
+                    <span>XML</span>
+                  </div>
+                  <!-- Azure Intune -->
+                  <div class="logo-item">
+                    <img src="https://garvis.ca/wp-content/uploads/2023/03/image-1.png" alt="Azure Intune Logo" />
+                    <span>Azure Intune</span>
+                  </div>
+                  <!-- Azure Entra -->
+                  <div class="logo-item">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8c/Microsoft_Entra_ID_color_icon.svg/640px-Microsoft_Entra_ID_color_icon.svg.png" alt="Azure Entra Logo" />
+                    <span>Azure Entra</span>
+                  </div>
+                  <!-- SCCM -->
+                  <div class="logo-item">
+                    <img src="https://img.icons8.com/?size=96&id=ThrCWrDxDa0v&format=png" alt="Azure Storage Logo" />
+                    <span>Azure Storage</span>
+                  </div>
+                </div>
+      </section>
+
+</main>
+
+      <footer id="contact" class="footer">
+        <div class="contact-icons">
+          <a href="mailto:Baconchinazom@yahoo.com" target="_blank" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mmakogu" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Denis21M" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="tel:+4915734379121" title="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+        <div class="footer-text">
+          © 2025 Bacon Chinazom Mmakogu
+        </div>
+      </footer>
+    
+      <button id="sidebarToggle" class="sidebar-toggle">☰</button>
     
     
     <div id="sidebar" class="sidebar">
       <button id="closeSidebar" class="close-btn">✖</button>
       <a href="index.html">Home</a>
       <a href="projects.html">Projects</a>
+      <a href="expedu.html">Experience & Education</a>
+      <a href="certref.html">Certifications & Referees</a>
     </div>
     
     
-    <script src="portfolio.js"></script>
+  <script src="portfolio.js"></script>
 </body>
 </html>

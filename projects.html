@@ -12,70 +12,72 @@
 </head>
 
 <body>
-  
-    <header>
-        <div>
-          <div id="header-photo">
-            <img src="./media/prof.jpg" alt="Profile Photo of Bacon"/>
-          </div>
-          <div id="header-text">
-            <h1>Bacon Mmakogu (He/Him)</h1>
-            <p>DevOps & Cloud Specialist | Junior Frontend Web Developer</p>
-            
-          </div>
-        </div>
-      </header>
     
     <main>
-      <div class="bg-image"></div>
-    
       <div class="overlay"></div>
 
       <section id="projects" class="fade-in">
-        
-        <h2>📚 Projects (source codes in GitHub)</h2>
-       
-        <div class="project-gallery" >
-
-          <h3 class="project-subhead">DevOps Projects</h3>
-          
-          <div class="project-card">
-            <a href="http://74.178.201.104/login"><img class="pc" src="./media/restauranty.png" alt="Restauranty App Screenshot"></a>
-            <p>Restauranty App (AKS)</p>
-            <button onclick="openModal('pro1')">Show more</button>
-          </div>
+        <div class="project-section">
+          <h2 class="project-head">DevOps Projects</h2>
       
-          <div class="project-card">
-            <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/"><img class="pc" src="./media/vote1.png" alt="EKS-based Microservice App Screenshot"></a>
-            <p>Vote App (EKS)</p>
-            <button onclick="openModal('pro2')">Show more</button>
-          </div>
+          <div class="slider-controls">
+            <button class="slide-btn left" onclick="slideProjects('left')">&#8249;</button>
       
-          <div class="project-card">
-            <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/"><img class="pc" src="./media/vote1.png" alt="EC2-based Multistack App Screenshot"></a>
-            <p>Vote App (EC2s)</p>
-            <button onclick="openModal('pro3')">Show more</button>
-          </div>
-
-          <div class="project-card">
-            <a href="http://52.158.116.219/"><img class="pc" src="./media/expensy.png" alt="EC2-based Multistack App Screenshot"></a>
-            <p>Expensy App (AKS)</p>
-            <button onclick="openModal('pro4')">Show more</button>
+            <div class="project-slider" id="projectSlider">
+              <div class="project-card">
+                <a href="https://github.com/Denis21M/Restauranty-End-to-End-DevOps-Deployment">
+                  <img class="pc" src="./media/restauranty.png" alt="Restauranty App Screenshot">
+                </a>
+                <p>Restauranty App (AKS)</p>
+                <button onclick="openModal('pro1')">Show more</button>
+              </div>
+      
+              <div class="project-card">
+                <a href="https://github.com/Denis21M/EKS-based-microservice-apps-automation.git">
+                  <img class="pc" src="./media/vote1.png" alt="EKS-based Microservice App Screenshot">
+                </a>
+                <p>Vote App (EKS)</p>
+                <button onclick="openModal('pro2')">Show more</button>
+              </div>
+      
+              <div class="project-card">
+                <a href="https://github.com/Denis21M/EC2-based-Microservice-App-automation.git">
+                  <img class="pc" src="./media/vote1.png" alt="EC2-based Multistack App Screenshot">
+                </a>
+                <p>Vote App (EC2s)</p>
+                <button onclick="openModal('pro3')">Show more</button>
+              </div>
+      
+              <div class="project-card">
+                <a href="https://github.com/Denis21M/Expensy-End-to-End-DevOps-Deployment">
+                  <img class="pc" src="./media/expensy.png" alt="Expensy App Screenshot">
+                </a>
+                <p>Expensy App (AKS)</p>
+                <button onclick="openModal('pro4')">Show more</button>
+              </div>
+            </div>
+      
+            <button class="slide-btn right" onclick="slideProjects('right')">&#8250;</button>
           </div>
         </div>
-      </div>
-        </section>
+      </section>
+      
 
 
-          <section id="projects" class="fade-in">
-            </div>
-            <div class="project-gallery" >
+      <section id="projects" class="fade-in">
+        </div>
+          <div class="project-gallery" >
 
-          <h3 class="project-subhead">Frontend Projects</h3>
+          <h2 class="project-head">Frontend Projects</h2>
+
+          <div class="slider-controls">
+            <button class="slide-btn left" onclick="slideFront('left')">&#8249;</button>
+      
+            <div class="project-slider" id="frontSlider">
 
           <div class="project-card"> 
             <a href="https://www.chinazom.com/" target="_blank">
-              <img class="pc-view" src="./media/port-app.png" alt="Portfolio Website Screenshot">
+            <img class="pc-view" src="./media/port-app.png" alt="Portfolio Website Screenshot">
             <img class="mobile-view" src="./media/mmakogu.jpg" alt="Mobile View Screenshot">
           </a>
             <p>This Portfolio</p>
@@ -84,7 +86,7 @@
           
           <div class="project-card"> 
             <a href="https://denis21m.github.io/unit-converter/file.html" target="_blank">
-              <img class="pc-view" src="./media/convert.png" alt="Unit Converter Screenshot">
+            <img class="pc-view" src="./media/convert.png" alt="Unit Converter Screenshot">
             <img class="mobile-view" src="./media/unit.jpg" alt="Mobile View Screenshot">
             </a>
             <p>Unit Converter</p>
@@ -93,7 +95,7 @@
           
           <div class="project-card"> 
             <a href="https://denis21m.github.io/Innocent-Family-Data-Base-Project/family.html" target="_blank">
-              <img class="pc-view" src="./media/family.png" alt="Innocent-Family Database Screenshot">
+            <img class="pc-view" src="./media/family.png" alt="Innocent-Family Database Screenshot">
             <img class="mobile-view" src="./media/db.jpg" alt="Mobile View Screenshot">
             </a>
             <p>Innocent-Family Database</p>
@@ -103,13 +105,13 @@
           
           <div class="project-card"> 
             <a href="https://denis21m.github.io/Trivia-Game/Game.html" target="_blank">
-              <img class="pc-view" src="./media/game.png" alt="Trivia Game Screenshot">
+            <img class="pc-view" src="./media/game.png" alt="Trivia Game Screenshot">
             <img class="mobile-view" src="./media/gam.jpg" alt="Mobile View Screenshot">
             </a>
             <p>Trivia Game</p>
             <button onclick="window.open('https://github.com/Denis21M/Trivia-Game', '_blank')">Git Repo</button>
           </div>
-          
+          <button class="slide-btn right" onclick="slideFront('right')">&#8250;</button>
         </div>
         </div>
       </section>
@@ -154,7 +156,7 @@
           <p>- ELK Stack (Elasticsearch, Logstash, Kibana) (logging namespace): Centralized log collection and analysis</p>
         </li>
         <li>
-          <p>🔐 Security:</p>
+          <p>Security:</p>
           <p>- Ingress is the only public entrypoint.</p>
           <p>- JWT authentication handled by the Auth service; other services validate tokens.</p>
           <p>- Environment variables and secrets are stored securely in Kubernetes Secrets or .env (not committed).</p>
@@ -201,7 +203,7 @@
             <p>- Ingress Listener on port 80 (two listener rules), two target groups attached two frontend clients at port 80 and 81</p>
           </li>
           <li>
-            <p>🔐 Security Practices:</p>
+            <p>Security Practices:</p>
             <p>- Only Ingress Controller is publicly exposed via EKS Load Balancer</p>
             <p>- Communication between services is handled internally within the EKS cluster</p>
             <p>- No hardcoded credentials or sensitive data in the codebase</p>
@@ -225,10 +227,12 @@
         <img src="./media/vote.png" alt="Architecture" class="modal-img" />
         <em>Figure 5: Vote App</em>
         <p>
-          Cast vote <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/">here</a> Observe real time result update by adding /result to the elb URL, Note due to cost reasons the app may not be accessible at the time of use.
+          Cast vote <a href="http://a0a912b4be6fb48dca36244df479eaac-1792399815.eu-central-1.elb.amazonaws.com/">here</a> Observe real time result update by adding /result to the elb URL, Note due to cost reasons the app may not be accessible.
         </p>
         <img src="./media/project1.jpeg" alt="Architecture" class="modal-img" />
         <em>Figure 6: Project Architecture</em>
+
+        <h4>The application consists of:</h4>
         <ul>
         <li>
           <p>Frontend:</p>
@@ -249,7 +253,7 @@
           <p>- Internet Gateway (IGW): Enables external traffic routing via ALB and Bastion Host</p>
         </li>
         <li>
-          <p>🔐 Security:</p>
+          <p>Security:</p>
           <p>- Security group rules defined for tightly controlled communication for expmple, redis allows connection from vote and worker only, postgress allow connection from result and worker only</p>
           <p>- EC2s only allow connection from Bastion host which hosts Ansible and uses ProxyJump for secure SSH access. Automates application installation and configuration across EC2 instances</p>
         </li>
@@ -299,6 +303,8 @@
         <button id="closeSidebar" class="close-btn">✖</button>
         <a href="index.html">Home</a>
         <a href="projects.html">Projects</a>
+        <a href="expedu.html">Experience & Education</a>
+        <a href="certref.html">Certifications & Referees</a>
       </div>
 
       <script src="portfolio.js"></script>

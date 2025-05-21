@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
+</head>
+
+<body>
+    
+    
+  <main>
+    
+      <div class="overlay"></div>
+
+    <section id="certification" class="fade-in">
+        <h2 class="project-head">Professional Certifications</h2>
+      <div class="certref-wrapper">
+          <button class="scroll-button left" onclick="scrollCerts(-1)">&#10094;</button>
+        <div class="certref-container" id="certContainer">
+          <div class="certref-card">           
+              <img src="./media/devops1.png" alt="DevOps Certificate" onclick="openCertModal(this.src)">
+              <figcaption>DevOps & Cloud (2025)</figcaption>           
+          </div>
+          <div class="certref-card">           
+              <img src="./media/sql1.png" alt="SQL Certificate" onclick="openCertModal(this.src)">
+              <figcaption>SQL (2024)</figcaption>          
+          </div>
+          <div class="certref-card">
+              <img src="./media/frontend1.png" alt="Frontend Certificate" onclick="openCertModal(this.src)">
+              <figcaption>Front-end (2024)</figcaption>
+          </div>
+          <div class="certref-card">
+              <img src="./media/bmc1.png" alt="BMC Certificate" onclick="openCertModal(this.src)">
+              <figcaption>BMC (2020)</figcaption>
+          </div>
+        </div>
+        <button class="scroll-button right" onclick="scrollCerts(1)">&#10095;</button>
+      </div>
+    </section>
+      
+      <div id="certModal" class="modal">
+        <img id="modalImage" class="overlay-image" />
+      </div>
+
+      <section id="references" class="fade-in">
+        <h2 class="project-head">Referees</h2>
+        <div class="certref-wrapper">
+          <button class="scroll-button left" onclick="scrollRefs(-1)">&#10094;</button>
+      
+          <div class="certref-container" id="refContainer">
+            <div class="certref-card">            
+              <img src="./media/htw1.png" alt="HTW" onclick="openCertModal(this.src)">
+              <figcaption>Prof. Dr. Tetiana Paientko</figcaption>           
+            </div>
+            <div class="certref-card">           
+              <img src="./media/cnx.png" alt="CNX" onclick="openCertModal(this.src)">
+              <figcaption>Malgorzata Kirkiewicz</figcaption>           
+            </div>
+            <div class="certref-card">            
+              <img src="./media/dimitra1.png" alt="Dimitra" onclick="openCertModal(this.src)">
+              <figcaption>Jesus Alamo</figcaption>           
+            </div>
+          </div>
+      
+          <button class="scroll-button right" onclick="scrollRefs(1)">&#10095;</button>
+        </div>
+      </section>
+       
+
+      <footer id="contact" class="footer">
+        <div class="contact-icons">
+          <a href="mailto:Baconchinazom@yahoo.com" target="_blank" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/mmakogu" target="_blank" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/Denis21M" target="_blank" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="tel:+4915734379121" title="Phone">
+            <i class="fas fa-phone"></i>
+          </a>
+        </div>
+        <div class="footer-text">
+          © 2025 Bacon Chinazom Mmakogu
+        </div>
+      </footer>
+      
+</main>
+        
+        <button id="sidebarToggle" class="sidebar-toggle">☰</button>
+        
+        
+        <div id="sidebar" class="sidebar">
+          <button id="closeSidebar" class="close-btn">✖</button>
+          <a href="index.html">Home</a>
+          <a href="projects.html">Projects</a>
+          <a href="expedu.html">Experience & Education</a>
+          <a href="certref.html">Certifications & Referees</a>
+        </div>
+  
+  <script src="portfolio.js"></script>
+</body>
+</html>

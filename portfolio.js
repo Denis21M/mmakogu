@@ -82,8 +82,89 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 
+function scrollCerts(direction) {
+  const container = document.getElementById("certContainer");
+  const scrollAmount = 250;
+
+  if (container) {
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+}
+
+function scrollRefs(direction) {
+  const container = document.getElementById("refContainer");
+  const scrollAmount = 250;
+
+  if (container) {
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: "smooth"
+    });
+  }
+}
+
+function slideProjects(direction) {
+  const slider = document.getElementById('projectSlider');
+  const scrollAmount = 300; // Adjust based on card width
+
+  if (direction === 'left') {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+
+function slideFront(direction) {
+  const slider = document.getElementById('frontSlider');
+  const scrollAmount = 300; // Adjust based on card width
+
+  if (direction === 'left') {
+    slider.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  } else {
+    slider.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  }
+}
+
+function updateScrollButtons() {
+  // For each certref-wrapper on the page
+  document.querySelectorAll('.certref-wrapper').forEach(wrapper => {
+    const container = wrapper.querySelector('.certref-container');
+    const leftBtn = wrapper.querySelector('.scroll-button.left');
+    const rightBtn = wrapper.querySelector('.scroll-button.right');
+
+    if (!container || !leftBtn || !rightBtn) return;
+
+    if (container.scrollWidth > container.clientWidth) {
+      leftBtn.style.display = 'block';
+      rightBtn.style.display = 'block';
+    } else {
+      leftBtn.style.display = 'none';
+      rightBtn.style.display = 'none';
+    }
+  });
+}
+
+// Run on page load and window resize
+window.addEventListener('load', updateScrollButtons);
+window.addEventListener('resize', updateScrollButtons);
+
+// certref images
+function openCertModal(src) {
+  const modal = document.getElementById("certModal");
+  const modalImg = document.getElementById("modalImage");
+  modal.style.display = "flex";
+  modalImg.src = src;
+}
+
+function closeModal() {
+  document.getElementById("certModal").style.display = "none";
+}
 
 
+// educ&exp modals
 function openModal(id) {
   document.getElementById(id).style.display = 'block';
 }
